@@ -1,0 +1,89 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    text-align: center;
+}
+
+h1 {
+    font-weight: 400;
+    color: #6a5953;
+}
+
+kbd {
+    font-size: 0.9em; /* от шрифта родителя */
+    display: inline-block;
+    line-height: 1.1;
+}
+
+.wrap {
+    display: inline-block;
+    margin: 0 40px 2em 0;
+    background: rgba(131, 131, 131, 0.5);
+}
+
+div {
+    width: 170px;
+    height: 100px;
+    line-height: 100px;
+    margin: 0 auto;
+    transition: all 0.5s ease-in-out;
+}
+
+.one, .four, .seven, .ten {
+    background: rgba(135, 86, 120, .4);
+}
+
+.one:hover {
+    transform: translateX(20px);
+}
+
+.two, .five, .eight, .eleven {
+    background: rgba(0,228,246, .4);
+}
+
+.two:hover {
+    transform: translateY(-20px);
+}
+
+.three, .six, .nine {
+    background: rgba(235, 153, 0, .4);
+}
+
+.three:hover {
+    transform: translate(-20px, 20px);
+}
+
+.four:hover {
+    transform: scaleX(-1);
+}
+
+.five:hover {
+    transform: scaleY(1.2);
+}
+
+.six:hover {
+    transform: scale(1.2, 0.5);
+}
+
+.seven:hover {
+    transform: rotate(720deg);
+}
+
+.eight:hover {
+    transform: skewX(20deg);
+}
+
+.nine:hover {
+    transform: skewY(-20deg);
+}
+
+.ten:hover {
+    transform: skew(-20deg, 20deg);
+}
+
+.eleven:hover {
+    transform: matrix(1.2, 0, 0.5, 1.2, 50, 0); /* универсальное значению. 1 - по иксу, 4 - по игрику, 5-6 - смещение, 2-3 - искажение */
+}
+

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let div1;
+        let leftPos = 0;
+
+        window.onload = () => {
+            div1 = document.getElementById('div1');
+            setInterval(animate, 10);
+        }
+
+        function animate() {
+            div1.style.left = leftPos + "px";
+            leftPos += 1;
+        }
+    </script>
+</head>
+<body>
+
+    <div id="div1" style="height: 30px; width: 30px; background-color: green; 
+    position: relative;"></div>
+    
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!-- https://jonsuh.com/hamburgers/ - сайт с кнопками
+https://jquery.com/download/ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/hamburgers.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <button class="hamburger hamburger--emphatic" type="button">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>
+
+    <div class="main-wrapper">
+
+        <header></header>
+
+        <div class="menu">
+            <nav>
+                <a href="" class="active">Ссылка 1</a>
+                <a href="">Ссылка 2</a>
+                <a href="">Ссылка 3</a>
+                <a href="">Ссылка 4</a>
+                <a href="">Ссылка 5</a>
+                <a href="">Ссылка 6</a>
+            </nav>
+        </div>
+
+        <div class="content">
+            <div class="leftbar">
+                <div class="block1">
+                    <p><img src="images/Pig1.jpg" alt="" class="img_2">  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore voluptates corporis exercitationem vel ipsam cupiditate itaque nam rerum ipsa, dolore provident iusto mollitia blanditiis reprehenderit quia repellat. A, vero voluptatum.</p>
+                    <p>Quasi perferendis maxime beatae, officia sed adipisci maiores non repellat porro, nulla omnis expedita voluptates nisi ipsam! Animi, neque eveniet odit possimus accusamus fugit natus, tenetur repudiandae consequatur aspernatur ab.</p>
+                    <p>Nostrum et voluptates ducimus adipisci totam eveniet libero, fugit rerum inventore. Impedit et ratione maiores nisi quas? Porro iusto quos, aliquam incidunt sit aperiam laborum, quo architecto est inventore repellat.</p>
+                    <p class="venzel"><img src="images/venzel.jpg" alt=""></p>
+                </div>
+                <div class="block2">
+                    <div class="block2__image">
+                        <img src="images/Pig2.jpg" alt="">
+                    </div>
+                    <div class="block2__text">
+                        <h3>Заголовок 3 уровня</h3>
+                        <ol>
+                            <li><span>Lorem.</span></li>
+                            <li><span>Aperiam!</span></li>
+                            <li><span>Voluptatum.</span></li>
+                            <li><span>Corporis.</span></li>
+                            <li><span>Minus!</span></li>
+                            <li><span>Abitaque?</span></li>
+                        </ol>
+                        <ol>
+                            <li><span>Nesciunt?</span></li>
+                            <li><span>Sunt.</span></li>
+                            <li><span>Neque.</span></li>
+                            <li><span>Pariatur.</span></li>
+                            <li><span>Velit.</span></li>
+                            <li><span>Repellat?</span></li>
+                        </ol>
+                        <div><img src="images/line.jpg" alt=""></div>
+                    </div>
+                </div>
+            </div>
+            <div class="rightbar">
+                <h2>Заголовок 2 уровня</h2>
+                <ul>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo ullam provident doloribus a neque laborum eum</li>
+                    <li>Eveniet corrupti, deleniti ullam eum voluptatem repudiandae tenetur aliquam quis repellendus molestiae esse sint aspernatur .</li>
+                    <li>Blanditiis rerum provident atque aperiam deleniti aliquam nisi.</li>
+                </ul>
+            </div>
+        </div>
+
+        <footer>
+            <div>
+                <nav>
+                    <a href="">Ссылка 1</a>
+                    <a href="">Ссылка 2</a>
+                    <a href="">Ссылка 3</a>
+                    <a href="">Ссылка 4</a>
+                    <a href="">Ссылка 5</a>
+                    <a href="">Ссылка 6</a>
+                </nav>
+            </div>
+            <div>&copy; PIG.RU,2007 | All right reserved. <a href="">HTML</a>|<a href="">CSS</a> | email:<a href="mailto:piggs@pig.ru">piggs@pig.ru</a></div>
+        </footer>
+
+    </div>
+
+    <script>
+        /**
+         * forEach implementation for Objects/NodeLists/Arrays, automatic type loops and context options
+         *
+         * @private
+         * @author Todd Motto
+         * @link https://github.com/toddmotto/foreach
+         * @param {Array|Object|NodeList} collection - Collection of items to iterate, could be an Array, Object or NodeList
+         * @callback requestCallback      callback   - Callback function for each iteration.
+         * @param {Array|Object|NodeList} scope=null - Object/NodeList/Array that forEach is iterating over, to use as the this value when executing callback.
+         * @returns {}
+         */
+          var forEach=function(t,o,r){if("[object Object]"===Object.prototype.toString.call(t))for(var c in t)Object.prototype.hasOwnProperty.call(t,c)&&o.call(r,t[c],c,t);else for(var e=0,l=t.length;l>e;e++)o.call(r,t[e],e,t)};
+      
+          var hamburgers = document.querySelectorAll(".hamburger");
+          if (hamburgers.length > 0) {
+            forEach(hamburgers, function(hamburger) {
+              hamburger.addEventListener("click", function() {
+                this.classList.toggle("is-active");
+              }, false);
+            });
+          }
+        </script>
+        <script src="js/index.js"></script>
+        <script src="js/main.js"></script>
+
+</body>
+</html>

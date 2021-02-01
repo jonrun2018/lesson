@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="js/script.js"></script>
+
+    <script>
+
+        window.onload = function () {
+            let animation = new Animation(
+                "animCanvas",
+                5,
+                [
+                    "images/frame1.jpg",
+                    "images/frame2.jpg",
+                    "images/frame3.jpg",
+                    "images/frame4.jpg",
+                    "images/frame5.jpg",
+                    "images/frame6.jpg"
+                ]
+            );
+
+
+            document.getElementById("startButton").addEventListener('click', function () {
+                animation.start();
+            })
+
+            document.getElementById("stopButton").addEventListener('click', function () {
+                animation.stop();
+            })
+        }
+
+
+    </script>
+</head>
+
+<body>
+
+    <img id="animCanvas" src="images/frame1.jpg" alt="">
+    <br>
+    <input id="startButton" type="button" value="start">
+    <input id="stopButton" type="button" value="stop">
+
+</body>
+
+</html>

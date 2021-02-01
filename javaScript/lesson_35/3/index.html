@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function drow() {
+            let canvas = document.getElementById("canvas");
+            let context = canvas.getContext("2d");
+
+            context.fillStyle = 'blue'
+            context.fillRect(100, 100, 50, 50); // первые два координаты, еще два ширина и высота
+
+            context.strokeStyle = "red";
+            context.lineWidth = 10;
+            context.strokeRect(100, 100, 50, 50); // рамка
+
+            context.clearRect(125, 125, 35, 35) // очищает часть области
+        }
+
+        window.addEventListener('load', drow, true);
+    </script>
+<body>
+    
+    <canvas id="canvas" height="300" width="300" style="border: 1px solid black">
+        Ваш браузер не поддерживает canvas;
+    </canvas>
+
+</body>
+</html>

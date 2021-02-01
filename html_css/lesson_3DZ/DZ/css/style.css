@@ -1,0 +1,40 @@
+* {
+   box-sizing: border-box;
+}
+
+
+.blue {
+    border: 3px solid blue;
+    padding: 3px;
+    margin-top: 50px;
+    margin-left: 20%;
+    margin-right: 30%;
+}
+
+.red {
+    border: 3px solid red;
+    display: flex;
+    padding: 3px;
+    overflow: auto;
+}
+
+.green {
+    border: 3px solid green;
+    padding: 3px;
+}
+
+.yellow {
+    display: flex;
+    height: 200px;
+}
+
+.yellowAll {
+    border: 3px solid yellow;
+}
+
+.yellowB {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+

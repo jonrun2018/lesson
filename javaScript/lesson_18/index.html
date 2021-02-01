@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-size: 0;
+        }
+
+        div {
+            width: 50px;
+            height: 50px;
+            display: inline-block;
+        }
+
+        .red{
+            background-color: red;
+        }
+
+        .green{
+            background-color: green;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <script>
+
+        //F 10 - пройти одну строчку в консоле при debugger;
+        //F 11 - зайти в функцию
+        
+        /*
+        let a = prompt("Сколько етераций цикла?");
+        let b = prompt("Какую цифру не показывать?");
+
+        for(let i = 0; i <= a; i++) {
+            if (i == b) {
+                continue;
+            }
+            document.write(i + "<br>");
+        }
+        */
+
+        /*
+        // метод
+        label: for(let i = 0; i < 2; i++) {
+                for(let a = 0; a < 2; a++) {
+                    let input = prompt("Введите любой текст:");
+                    if(input == null) {
+                        break label; // выйдет сразу из двух циклов
+                    }
+                    document.write(input + " ");
+                }
+                document.write("<br>");
+        }
+        document.write("Готово!");
+        */
+
+        /*
+        let a = [1,2,3,4,5,6];
+        document.write(a);
+        */
+
+        /*
+        let month = [
+            "январь",
+            "февраль",
+            "март",
+            "апрель",
+            "май",
+            "июнь",
+            "июль",
+            "август",
+            "сентябрь",
+            "октябрь",
+            "ноябрь",
+            "декабрь"
+        ];
+
+        document.write(month);
+        */
+
+        /*
+        let c = [,,,];
+        document.write(c);
+        */
+
+        /*
+        let d = [
+            "Hello",
+            15,
+            true
+        ];
+
+        document.write(d);
+        */
+
+        /*
+        let a = Array(); //пустой массив
+        let b = Array(1,2,3,4,5,6);
+
+        document.write(b);
+        */
+
+        /*
+        let c = Array(10); //создает пустой массив с 10-ю элементами
+        document.write(c);
+        */
+
+        /*
+        let arr = Array(5);
+
+        arr[0] = 2;
+        arr[1] = 12;
+        arr[2] = 24;
+        arr[3] = 32;
+        arr[4] = 14;
+
+        document.write("Содержимое массива: " + arr + "<br>");
+
+        arr[4] = "Четыре";
+        arr[10] = "Десять";
+
+        document.write("Содержимое массива: " + arr + "<br>");
+        */
+
+        /*
+        let array = [
+            "h",
+            "e",
+            "l",
+            "l",
+            "o",
+        ]
+
+        document.write("Длина массива: " + array.length + "<br>");
+        
+        array.length = 7;
+
+        for (let a = 0; a < array.length; a++) {
+            document.write(array[a] + "<br>");
+        };
+
+        array.length = 2;
+
+        for (let a = 0; a < array.length; a++) {
+            document.write(array[a] + "<br>");
+        };
+        */
+        
+        /*
+        let array = [23,45,18];
+
+        document.write("Длина массива: " + array.length + "<br>");
+
+        array[10] = 35;
+
+        document.write("Новая длина массива: " + array.length + "<br>");
+
+        for (let a = 0; a < array.length; a++ ){
+            document.write(array[a] + "<br>");
+        }
+        */
+
+        /*
+        // ассоциативный массив
+        let laptop = {
+            cpu: "Core i7",
+            ram: "4 GB",
+            screen: "15"
+        };
+
+        let key = prompt("Введите интересующий параметр (ram, cpu, screen):");
+
+        let value = laptop[key];
+        document.write(value + "<br>");
+
+        document.write("<p>" + laptop.cpu);
+        document.write("<p>" + laptop["cpu"]);
+        */
+        
+        /*
+        let table = new Array (10);
+
+        for (let i = 0; i < table.length; i++) {
+            table[i] = new Array (10);
+        }
+
+        // инициализация массива
+        for (let row = 0; row < table.length; row++) {
+            for (let col = 0; col < table[row].length; col++) {
+                if ( (col + row) % 2 == 1 ) {
+                    table[row][col] = "<div class= 'red'></div>";
+                } else {
+                    table[row][col] = "<div class= 'green'></div>";
+                }
+            }
+        }
+
+        for (let row = 0; row < table.length; row++) {
+            for (let col = 0; col < table[row].length; col++) {
+                document.write(table[row][col]);
+            }
+            document.write("<br>");
+        }
+        */
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        
+
+        let x = 6;
+        let y = 15;
+        let z = 4;
+
+        x += y - x++ * z;
+        document.write("x = " + x + "<br>y = " + y + "<br>z = " + z + "<br><hr>");
+        z = --x - y * 5;
+        document.write("x = " + x + "<br>y = " + y + "<br>z = " + z + "<br><hr>");
+        y /= x + 5 % z;
+        document.write("x = " + x + "<br>y = " + y + "<br>z = " + z + "<br><hr>");
+        z = x++ + y * 5;
+        document.write("x = " + x + "<br>y = " + y + "<br>z = " + z + "<br><hr>");
+        x = y - x++ * z;
+        document.write("x = " + x + "<br>y = " + y + "<br>z = " + z + "<br><hr>");
+
+        let result = (x * y * z) / 3;
+        document.write("Среднее число: " + result);
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

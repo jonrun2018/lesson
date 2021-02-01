@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        function Rectangle(w,h) {
+            this.width = w;
+            this.height = h;
+        }
+
+        Rectangle.prototype.getArea = function() {
+            return this.width * this.height;
+        }
+
+        Rectangle.prototype.toString = function() {  // выводит объект [object object]
+            return "Прямоугольник W: " + this.width + " H:" + this.height;
+        }
+
+        Rectangle.prototype.valueOf = function () { // преоритет выше
+            return this.getArea();
+        }
+
+        Rectangle.prototype.equals = function(otherObj) {
+            if (this.width === otherObj.width && this.height === otherObj.height ){
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        Rectangle.prototype.compareTo = function(otherObj) { // написать одну строку
+            return this.getArea() - otherObj.getArea();
+        }
+
+        let rect1 = new Rectangle(200, 300);
+        let rect2 = new Rectangle(200, 300);
+        let res = rect1 == rect2;
+        document.write(res + "<br>"); //false потому что ссылаються на разные области памяти
+
+        let rect3 = rect1;
+        res = rect1 == rect3;
+        document.write(res + "<br>");
+
+        res = rect1.equals(rect2);
+        document.write(res + "<br>");
+
+        res = rect1.compareTo(rect2);
+        document.write(res + "<br>");
+
+        if (rect1 < rect2) {
+            document.write("Объект rect1 < rect2<br>")
+        }
+        if (rect1 > rect2) {
+            document.write("Объект rect1 > rect2<br>")
+        }
+
+        if (rect1.compareTo(rect2) > 0) {
+            document.write("Объект rect1 > rect2<br>")
+        }
+
+        if (rect1.compareTo(rect2) < 0) {
+            document.write("Объект rect1 > rect2<br>")
+        }
+
+        if (rect1.compareTo(rect2) == 0) {
+            document.write("Объект rect1 == rect2<br>")
+        }
+
+    </script>
+
+</body>
+</html>

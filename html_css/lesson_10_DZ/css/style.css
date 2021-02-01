@@ -1,0 +1,73 @@
+@import '../fonts/stylesheet.css';
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: rgb(0, 0, 0);
+    background-image: url(https://images.theconversation.com/files/337590/original/file-20200526-106842-8se1.jpeg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=900.0&fit=crop);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+}
+
+form {
+    height: 300px;
+    width: 400px;
+    border: 1px solid black;
+    margin: 100px auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background: rgba(173, 141, 0, .9);
+    border-radius: 20px;
+    padding: 20px;
+}
+
+p {
+    font-size: 30px;
+    font-family: 'True Gothic Cyr';
+/*    font-family: cursive; */
+    margin: 0;
+    margin-bottom: 11px;
+    text-shadow: 2px 2px 5px rgb(11, 252, 3);
+    color: rgb(255, 255, 255);
+}
+
+input {
+    width: 300px;
+    margin: 10px auto;
+    box-shadow: 2px 2px 5px rgb(210, 233, 1);
+}
+
+input[value=''] {
+    color: mediumblue;
+    font-size: 20px;
+}
+
+input::placeholder { /* обращаемся через псевдокласс */
+    color: rgb(70, 69, 69);
+}
+
+input[type='submit'] {
+    width: 200px;
+    height: 35px;
+    line-height: 25px;
+    color: rgb(18, 0, 99);
+    border: 3px rgb(131, 236, 113);
+    background: linear-gradient(rgb(11, 252, 3), rgb(1, 88, 1));
+    padding: 2px;
+    font-size: 20px;
+    border-radius: 5px;
+    border-style: groove;
+    box-shadow: 2px 2px 5px rgb(196, 4, 4);
+    margin-top: 13px;
+}
+
+input[type='submit']:hover {
+    color: white;
+    background: linear-gradient(rgb(252, 74, 3), rgb(117, 74, 3));
+    box-shadow: 2px 2px 5px rgb(23, 4, 196);
+}

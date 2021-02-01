@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        let r = +prompt("R:");
+        let h = +prompt("H:");
+        let v;
+        let s = 2*Math.PI*r*h + 2*Math.PI*Math.pow(r,2); //Math.pow(r,2) - r в квадрате
+        let s2 = 2*Math.PI*r*(r+h);
+
+        v = Math.PI*(r*r)*h;
+
+
+        if (s == s2) {
+            document.write("Площадь цилиндра: " + s + "<br>");
+        } else {
+            document.write('Что-то пошло не так!')
+        }
+        document.write("Объем: " + v);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

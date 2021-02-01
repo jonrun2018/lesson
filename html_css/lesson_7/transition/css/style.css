@@ -1,0 +1,69 @@
+/*.box {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: red;
+    /*transition: background-color 0.5s, border-radius 1s; управляем конкретным параметром, задав время*/ 
+/*  transition-property: border-radius;
+    transition-duration: 1s;
+}
+
+.box:hover {
+    background-color: yellow;
+    border-radius: 0;
+}
+*/
+
+body {
+    margin: 0;    
+}
+
+.wrap {
+    text-align: center;
+    background-color: grey;
+}
+
+.conteiner {
+    display: inline-block;
+}
+
+h1 {
+    color: red;
+    font-weight: 400;
+}
+
+kbd {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.box {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin: 20px 50px 0;
+}
+
+.wrap:hover .box {
+    transform: scale(2);
+}
+
+.box1 {
+    transition-duration: .5s;
+    background-color: indigo;
+    transition-delay: .5s; /* задержка перед анимацией */
+}
+
+.box2 {
+    background-color: lawngreen;
+    transition-duration: 1s;
+    transition-delay: 1s;
+}
+
+.box3 {
+    background-color: khaki;
+    transition-duration: 1.5s;
+    transition-delay: 1.5s;
+
+    transition: all/* свойство */ 1s /* время */ ease /* функция */ .5s /* задержка */, border-radius 2s linear /* отдельные параметры для border-radius */;
+}

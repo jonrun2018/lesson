@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //split
+        let str = "Сторока для тестировани примера";
+        let substrs = str.split(" ");
+        document.write(substrs.join(" | ") + "<br>");
+
+        //charAt возвращает символ по указаному индексу
+        let firstChar = str.charAt(0);
+        let lastChar = str.charAt(str.length - 1);
+        document.write(firstChar + "<br>");
+        document.write(lastChar + "<br>");
+
+        // indexOf
+        str = "ab-cd-ef-gh-ij";
+        let firstDash = str.indexOf("-");
+        document.write(firstDash + "<br>");
+        let lastDash = str.lastIndexOf("-");
+        document.write(lastDash + "<br>");
+
+        //toLowerCase -перевод строки в нижний регистр, toUpperCase - в верхний
+        str = "Hello World!";
+        document.write(str.toLowerCase() + "<br>");
+        document.write(str.toUpperCase() + "<br>");
+
+        //substr - возвращает стору с указаного индекса и нужное кол-во символов
+        let substr = str.substr(7,5);
+        document.write(substr + "<br>")
+
+        //substring - возвращает с указоного индекса и до указоного индекса без учета самих индексов
+        substr = str.substring(6,12);
+        document.write(substr + "<br>");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

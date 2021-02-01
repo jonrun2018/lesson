@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        body {
+            background: rgba(0, 0, 0, 0.342);
+        }
+
+        .white {
+            width: 50px;
+            height: 50px;
+            background: white;
+            display: inline-block;
+        }
+
+        .black {
+            width: 50px;
+            height: 50px;
+            background: black;
+            display: inline-block;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <script>
+         
+        for (let a = 1; a < 5; a++) {
+            for (let i = 1; i < 5; i++){
+                document.write("<div class = 'white'></div><div class = 'black'></div>");                
+            }
+            document.write("<br>");
+            for (let i = 1; i < 5; i++){
+                document.write("<div class = 'black'></div><div class = 'white'></div>");                
+            }
+            document.write("<br>");
+        }
+
+        document.write('<hr>');
+        
+        for (let a = 1; a < 5; a++) {
+            for (let i = 0; i < 8; i++){
+                if (i % 2) {
+                    document.write("<div class = 'white'></div>"); 
+                } else {
+                    document.write("<div class = 'black'></div>");
+                }         
+            }
+            document.write("<br>");
+            for (let i = 0; i < 8; i++){
+                if (i % 2) {
+                    document.write("<div class = 'black'></div>"); 
+                } else {
+                    document.write("<div class = 'white'></div>");
+                }         
+            }
+            document.write("<br>");
+        }
+
+        document.write("<hr>");
+
+        let s = 0;
+
+        for (let a = 1; a < 9; a++) {
+            s++;
+            for (let i = 0; i < 8; i++){
+                if (s % 2) {
+                    document.write("<div class = 'white'></div>"); 
+                } else {
+                    document.write("<div class = 'black'></div>");
+                }
+                s++;         
+            }
+            document.write("<br>");
+        }
+    
+    </script>
+    
+</body>
+</html>

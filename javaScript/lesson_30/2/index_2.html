@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.addEventListener("load",function () {
+            document.forms[0].addEventListener("submit", function(e) {
+                if(document.getElementById('nameinput').value.length == 0) {
+                    e.preventDefault(); // отменяем переход по ссылке в форме (выходит их функции)
+                    alert('Введите имя');
+                }
+            }, false)
+        });
+    </script>
+</head>
+<body>
+    
+    <form action="/test.html" method="post">
+        Имя <input id ="nameinput" type="text" name="name">
+        <input type="submit" value="Отправить">
+    </form>
+
+    <p style="color: grey">Если имя не ввели, форма не отправиться!</p>
+
+</body>
+</html>

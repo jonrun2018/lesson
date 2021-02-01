@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.addEventListener("load", init, false);
+
+        function init() {
+            let button1 = document.getElementById('button1');
+            button1.addEventListener("click", handler, false);
+        }
+
+        function handler(e) {
+            // тип события
+            let message = "type = " + e.type + "\r\n";
+
+            // таргет - документ в котором пароизошло событие
+            message += "target = " + e.target + "\r\n";
+            
+            //  получаем текущий узел (который работает в данный момент)
+            message += "currentTarget = " + e.currentTarget + "\r\n";
+
+            // число, указывающие этап. 1 - перехват, 2 - таргет, 3 - всплытие
+            message += "eventPhase = " + e.eventPhase + "\r\n";
+
+            //время
+            message += "timeStamp = " + e.timeStamp + "\r\n";
+
+            //true - если событие может всплывать
+            message += "bubbles = " + e.bubbles + "\r\n";
+
+            // true - если с событием связано действие по умолчанию
+            message += "cancelable = " + e.cancelable + "\r\n";
+
+            alert(message);
+        }
+    </script>
+</head>
+<body>
+
+    <input type="button" name="button1" id="button1" value="кнопка">
+    
+</body>
+</html>

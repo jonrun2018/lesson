@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *:focus {
+            outline: none;
+        }
+    </style>
+    <script>
+        window.onload = () => {
+            for (let i = 0; i < document.forms[0].elements.length; i++){
+                document.forms[0].elements[i].onfocus = function (){
+                    this.style.border = "1px solid red"
+                }
+            }
+            for (let i = 0; i < document.forms[0].elements.length; i++){
+                document.forms[0].elements[i].onblur = function (){
+                    this.style.border = "1px dotted green"
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <form>
+        Имя <input type="text" name="first"><br>
+        Фамилия <input type="text" name="second"><br>
+        Возраст <input type="text" name="third"><br>
+    </form>
+    
+</body>
+</html>

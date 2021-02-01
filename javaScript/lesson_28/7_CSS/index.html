@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .class1 {
+            font-family: Tahoma;
+            color: blue;
+        }
+
+        .class2 {
+            font-family: Courier New;
+            color: red;
+        }
+    </style>
+    <script>
+        // window.onload = () => {
+        //     let button = document.getElementsByTagName("input")[0];
+        
+        //     button.onclick = () => {
+        //         let div = document.getElementsByTagName("div")[0];
+
+        //         div.style.backgroundColor = "green";
+        //     }
+        // }
+
+        // меняем класс при нажатии на кнопку
+        let div
+
+        window.onload = () => {
+            document.getElementById("first").onclick = firstButtonHandler;
+            document.getElementById("second").onclick = secondButtonHandler;
+            div = document.getElementById('testDiv')
+        }
+
+        function firstButtonHandler() {
+            div.className = "class1";
+        }
+
+        function secondButtonHandler () {
+            div.className = "class2";
+        }
+    </script>
+</head>
+<body>
+    <!-- <div style = "width:200 px; height: 200px; background-color: red;"></div>
+    <input type="button" value="Сменить цвет"> -->
+    <input type="button" id="first" value="first">
+    <input type="button" id="second" value="second">
+    <div id="testDiv">
+        Test Div
+    </div>
+</body>
+</html>

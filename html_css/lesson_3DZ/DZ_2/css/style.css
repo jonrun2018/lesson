@@ -1,0 +1,170 @@
+* {
+    box-sizing: border-box; /* что бы не накладывались размеры */
+}
+
+.blue {
+    width: 800px;
+    border: 5px solid blue;
+    padding: 5px;
+    padding-bottom: 0px;
+    margin: 40px auto 0; /* выравнивает по центру */
+}
+
+.red {
+    border: 5px solid red;
+    padding: 5px;
+    margin-bottom: 5px;
+    padding-right: 0px;
+} 
+
+.green {
+    border: 5px solid green;
+    padding: 5px;
+    width: 100%; /* больше 50% процентов */
+    margin-right: 5px;
+}
+
+.flex {
+    display: flex;
+}
+
+.yellow {
+    border: 5px solid yellow;
+    width: 100%;
+}
+
+.red1__green1 {
+    padding-right: 0px;
+}
+
+.red1__green1 .yellow {
+    margin-right: 5px;
+    height: 100px;
+}
+
+.red1__green2 {
+    flex-direction: column;
+    padding-bottom: 0px;
+}
+
+.red1__green2 .yellow {
+    height: 100%;
+    margin-bottom: 5px;
+}
+
+.red2__green1 {
+    flex-direction: column;
+    padding-bottom: 0px;
+    width: 30%;
+}
+
+.red2__green1 .yellow {
+    width: 150px;
+    margin-bottom: 5px;
+    margin-right: 0px;
+}
+
+.red2__green2 {
+    padding-right: 0px;
+}
+
+.red2__green2 .yellow {
+    height: 100px;
+    margin-right: 5px;
+}
+
+.red2__green3 {
+    flex-direction: column;
+    padding-bottom: 0px;
+    width: 30%;
+}
+
+.red2__green3 .yellow {
+    height: 100%;
+    width: 150px;
+    margin-bottom: 5px;
+}
+
+.red3__green1 {
+    padding-right: 0;
+
+}
+
+.red3__green1 .yellow {
+    margin-right: 5px;
+    width: 150px;
+    height: 100px;
+}
+
+.red3__green2 {
+    flex-direction: column;
+    padding-bottom: 0px;
+}
+
+.red3__green2 .yellow {
+    margin-bottom: 5px;
+    height: 50%;
+}
+
+.red3__green3 {
+    flex-direction: column;
+    padding-bottom: 5px;
+    width: 30%;
+}
+
+.red3__green3 .yellow {
+    margin-bottom: 5px;
+    height: 50%;
+    width: 150px;
+}
+
+.red4__green1 {
+    flex-wrap: wrap;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    width: 30%;
+}
+
+.red4__green1 .yellow {
+    margin-right: 5px;
+    margin-bottom: 5px;
+    width: 72.5px;
+    height: 47.5px;
+}
+
+.red4__green2 {
+    flex-wrap: wrap;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    width: 30%;
+}
+
+.red4__green2 .yellow {
+    margin-right: 5px;
+    margin-bottom: 5px;
+    width: 72.5px;
+    height: 47.5px;
+}
+
+.red4__green3__yellow1 {
+    padding-right: 0px;
+    width: 50%;   
+}
+
+.red4__green3__yellow1 .yellow {
+    margin-right: 5px;
+    height: 100px;
+    width: 60%;
+}
+
+.red4__green3__yellow2 {
+    flex-direction: column;
+    padding-bottom: 0px;
+    width: 50%;
+    height: 100%;
+}
+
+.red4__green3__yellow2 .yellow {
+
+    height: 100%;
+}

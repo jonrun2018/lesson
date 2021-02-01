@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        /*
+        // инкапсуляция - сокрытие реализации и данных объекта
+
+        let MyClass = function() {
+            // закрытый метод
+            let privateMethod = function () {
+                document.write("Private method <br>");
+            }
+
+            // открытый метод
+            this.publicMethod = function () {
+                document.write("Private method <br>");
+                privateMethod();
+            }
+        }
+
+        let obj = new MyClass();
+
+        obj.publicMethod();
+        obj.privateMethod();
+        */
+
+        /*
+        // Наследование - механизм объектно ореентированного программирования который позволяет описать новый класс на основе существующего
+
+        function Human(name) {
+            this.name = name;
+            this.talk = function() {
+                document.write("Hello, my name is " + this.name + "<br>");
+            }
+        }
+
+        function Student(name) {
+            this.name = name;
+            this.school = "School 1";
+        }
+
+        function Woker(name) {
+            this.name = name;
+            this.speciality = "Software developer"
+        }
+
+        let human = new Human("name");
+        // human.talk();
+
+        Student.prototype = human; // наследует human
+        Woker.prototype = human;
+
+        let Alex = new Student("Alex");
+        let Andrey = new Woker("Andrey");
+
+        Alex.talk();
+        document.write(Alex.school + "<br>");
+
+        Andrey.talk();
+        document.write(Alex.speciality);
+        */
+
+        /*
+        // Полиморфизм - возможность объектов с одинаковой специфакацией иметь различную реализацию
+
+        function Human(name) {
+            this.name = name;
+            this.talk = function() {
+                document.write("Hello, my name is " + this.name + "<br>");
+            }
+        }
+
+        function Student(name) {
+            this.name = name;
+            this.school = "School 1";
+        }
+
+        function Woker(name) {
+            this.name = name;
+            this.speciality = "Software developer"
+            
+            this.talk = function () { // Полиморфизм
+                document.write("Hey, I'm " + name + "<br>");
+            }
+        }
+
+        let human = new Human("name");
+        // human.talk();
+
+        Student.prototype = human; // наследует human
+        Woker.prototype = human;
+
+        let Alex = new Student("Alex");
+        let Andrey = new Woker("Andrey");
+
+        Alex.talk();
+        document.write(Alex.school + "<br>");
+
+        Andrey.talk();
+        document.write(Alex.speciality);
+        */
+
+        /*
+        // instanceof - проверяет тип объекта
+
+        let x = new Array(10);
+
+        if (x instanceof Array) {
+            alert("x is Array");
+        } else if (x instanceof String) {
+            alert("x is String")
+        }
+        */
+
+        /*
+        // typeof - оператор для получения типа объектов в текстовом виде
+
+        let test = "hello";
+        document.write(typeof test + "<br>");
+        */
+
+        /*
+        let num = "hello";
+        document.write(typeof num + "<br>");
+
+        let num1 = 123;
+        document.write(typeof num1 + "<br>");
+
+        let num2 = true;
+        document.write(typeof num2 + "<br>");
+
+        let num3 = new Array(5);
+        document.write(typeof num3 + "<br>");
+
+        let num4 = new Date();
+        document.write(typeof num4 + "<br>");
+
+        document.write(typeof num4.toString() + "<br>");
+
+        function printMessage(x) {
+
+            this.x = x;
+
+            if (typeof this.x == "string") {
+                document.write("X is String")
+            } else {
+                alert("x no String")
+            }
+        }
+
+        printMessage(num);
+        */
+
+        function Box(width,height,depth,material) {
+            this.width = width;
+            this.height = height;
+            this.depth = depth;
+            this.material = material;
+        }
+
+        Box.prototype.volume = function() {
+                return this.width * this.height * this.depth;
+            }
+
+        Box.prototype.equals = function(box) {
+            if(this.material == box.material) {
+                document.write("равны");
+            } else {
+                document.write("не равны");
+            }
+        }
+
+        let box1 = new Box(24,32,32);
+        let box2 = new Box(21,32,45);
+        
+        document.write(box1.volume());
+
+        box1.material = 90;
+        box2.material = 90;
+        
+        box1.equals(box2);
+
+
+
+    </script>
+    
+</body>
+</html>

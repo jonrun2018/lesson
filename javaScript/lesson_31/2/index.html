@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Verdana;
+        }
+        label {
+            width: 150px;
+            float: left;
+        }
+        input + span {
+            visibility: hidden;
+            color: red;
+        }
+    </style>
+    <script>
+        window.addEventListener("load", init, false);
+
+        function init() {
+            let inputs = document.getElementsByTagName("input");
+            
+            for(let i = 0; i < inputs.length; i++){
+                let e = inputs[i];
+                if(e.type != "text")continue;
+                if(e.dataset.charsAllowed == undefined) continue; // dataset обращаемся к атрибуту
+                // if(e.getAttribute("data-chars-allowed") == undefined) continue;
+
+                e.addEventListener("keypress", keyFilter, false);
+            }
+
+            function keyFilter(e){
+                if(!e) e = window.event;
+
+                if(e.charCode == 0 || e.charCode < 32) return true;
+                let allowedText = e.target.dataset.charsAllowed;
+                let element = e.target.dataset.messageId;
+
+                let symbol = String.fromCharCode(e.charCode).toLowerCase();
+
+                if(allowedText.search(symbol) == -1) {
+                    if(element) {
+                        element = document.getElementById(element);
+                        element.style.visibility = "visible";
+                    }
+                    e.preventDefault();
+                    return false;
+                } else {
+                    if(element) {
+                        element.style.visibility = "hidden";
+                    }
+                    return true;
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <p>
+        <label>Имя</label>
+        <input type="text" name="firstName" data-chars-allowed = "йцукенгшщзхъфывапролджэячсмитьъбю" data-message-id="firstNameError">
+        <span id="firstNameError">Допускаеться только буквы русского алфавита</span>
+    </p>
+    <p>
+        <label>почтовый индекс</label>
+        <input type="text" name="zip" data-chars-allowed="1234567890" data-message-id="zipError">
+        <span id="zipError">Допускаються только цифры</span>
+    </p>
+    
+</body>
+</html>

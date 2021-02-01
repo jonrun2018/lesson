@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #wrapper p {
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            float: left;
+            margin: 10px;
+        }
+    </style>
+    <script>
+        // window.attachEvent("onload", function(){
+
+            if(window.addEventListener){
+                window.addEventListener("load", init, false);
+            } else if (window.attachEvent){
+                window.attachEvent("onload", init);
+            }
+
+            function init () {
+                let e = document.getElementById('btn');
+                if(e.addEventListener) e.addEventListener("click", handler, false);
+                else if(e.attachEvent) e.attachEvent("onclick", handler);
+            }
+
+            // let e = document.getElementById("btn");
+            // // let eRemove = document.getElementById("btnRemove");
+
+            // // e.attachEvent("onclick", handler);
+            // // eRemove.attachEvent("onclick", function(){
+            // //     e.detachEvent("onclick", handler);
+            // // })
+
+            function handler() {
+                alert("Обработчик событий");
+            }
+        // });
+    </script>
+</head>
+<body>
+    
+    <input type="button" id="btn" value="кнопка">
+    <!-- <input type="button" id="btnRemove" value="Удалить обработчик"> -->
+
+</body>
+</html>

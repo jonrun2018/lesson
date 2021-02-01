@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        /*
+        // рекурсия
+        function f (counter) {
+            counter--;
+            document.write("<p style='background: lightblue'>Первая половина метода: " + counter);
+                
+            if(counter != 0){
+                f(counter);
+            }
+
+            document.write("<p style='background: yellow'>Вторая половина метода: " + counter);
+        }
+
+        f(3);
+        */
+
+        /*
+        // вычисляем факториал с помощью рекурсии
+        function factorial(x) {
+            if (x <= 1) {
+                return 1;
+            }
+
+            return x * factorial(x-1);
+        }
+
+        let x = +prompt("Введите число: ");
+
+        document.write("Факториал " + x + " != " + factorial(x));
+        */
+
+        /*
+        let f = function() {
+            document.write("<p>Hello")
+        }
+
+        f();
+
+        f = function() {
+            document.write("<p>Bye!");
+        }
+
+        f();
+        */
+
+        /*
+        let flag = false;
+
+        let f = function() {
+            document.write("<p>Hello")
+                flag = true;
+        }
+
+        if (flag == false) {
+            f = function() {
+                document.write("<p>Bye!")
+                flag = true;
+            }
+        }
+        */
+
+        /*
+        function outer() {
+            inner();
+
+            function inner(){
+                document.write("<p style = 'background-color: lightblue;'>Inner Function");
+            }
+            
+            inner();
+        } 
+
+        outer();
+        */
+
+        /*
+        // считаем гипотинузу
+        function hypotenuse(a, b){
+            function pow(x){
+                return x*x;
+            }
+
+            return Math.sqrt(pow(a) + pow(b)); //умножаем оба числа возведенные в квадрат
+        }
+
+        document.write("Гипотинуза треугольника с катета 3 и 4 равна: " + hypotenuse(3,4));
+        */
+
+        /*
+        let add = function(a,b) {
+            return a + b;
+        }
+
+        let sub = function(a,b) {
+            return a -b;
+        }
+
+        function show(callBackFunction, a, b) {
+            let result = callBackFunction(a,b);
+            document.write("<p>" + result);
+        }
+
+        show(sub,10,20);
+        */
+
+        /*
+        // Объекты
+        let instance = { propertiA: 222, propertiB: 444 };
+
+        document.write("<p>instance.propertiA " + instance.propertiA);
+        document.write("<p>instance.propertiB " + instance.propertiB);
+
+        document.write("<hr>");
+
+        instance.propertiA = 333;
+        instance[propertiB] = 555;
+
+        document.write("<p>instance.propertiA " + instance.propertiA);
+        document.write("<p>instance.propertiB " + instance.propertiB);
+
+        document.write("<hr>");
+        
+        document.write(instance);
+        */
+
+        /*
+        // делаем объект для точки
+        let point = new Object();
+
+        point.x = 10;
+        point.y = 15;
+
+        point.f = function() {
+            document.write("<p>x = " + point.x + "<p>y = " + point.y)
+        }
+
+        point.f();
+        */
+
+        /*
+        let human = new Object ();
+
+        human.firstName = "Jon",
+        human.lastName = "Smit",
+        human.age = 32,
+        human.specialty = "cop"
+
+        document.write("<p> " + human.firstName + " " + human.lastName);
+
+        human.age = 25;
+
+        document.write("<p>Age: " + human.age);
+        */
+
+        /*
+        let human = new Object ();
+        human.firstName = "Jon";
+        human.secondName = "Smit";
+        human.age = 27;
+        human.occupation = "Web Developer"; 
+        human.show = function () {
+            document.write("<p>" + this.firstName);
+            document.write("<p>" + this.secondName);
+            document.write("<p>" + this.age);
+            document.write("<p>" + this.occupation);
+        };
+        human.changeWork = function(occupation) {
+            this.occupation = occupation;
+        }       
+
+        human.show();
+
+        human.changeWork("System Administration");
+
+        human.show();
+        */
+
+        /*
+        let house = new Object();
+        house.roof = "Крыша";
+        house.thirdFloor = "Третий этаж";
+        house.secondFloor = "Второй этаж";
+        house.firstFloor = "Первый этаж";
+        house.basement = "Фундамент";
+        house.adres = "Адрес";
+
+        for(i in house) {
+            document.write(house[i] + "<br>");
+        }
+        */
+
+        /*
+        let house = new Object();
+        house.roof = "Крыша";
+        house.thirdFloor = "Третий этаж";
+        house.secondFloor = "Второй этаж";
+        house.firstFloor = "Первый этаж";
+        house.basement = "Фундамент";
+        house.adres = "Адрес";
+
+        if("thirdFloor" in house) {
+            document.write(house.thirdFloor);
+        }
+        */
+
+        /*
+        // удаление
+        let house = new Object();
+        house.roof = "Крыша";
+        house.thirdFloor = "Третий этаж";
+        house.secondFloor = "Второй этаж";
+        house.firstFloor = "Первый этаж";
+        house.basement = "Фундамент";
+        house.adres = "Адрес";
+
+        if("secondFloor" in house) {
+            delete house.secondFloor;
+        }
+
+        for(i in house) {
+            document.write(house[i] + "<br>");
+        }
+        */
+
+        /*
+        // удаление эллемента в массиве
+        let array = new Array(1,2,3,4,5,6,7);
+
+        document.write("<p>Массив до удаления: " + array.join("<br>"));
+
+        let index = +prompt("Выберите индекс массива для удаления: ");
+
+        delete array[index];
+
+        document.write("<p>Массив после удаления: " + array.join("<br>"));
+        */
+
+        /*
+        // запрещено в строгом режиме
+        let house = new Object();
+        house.roof = "Крыша";
+        house.thirdFloor = "Третий этаж";
+        house.secondFloor = "Второй этаж";
+        house.firstFloor = "Первый этаж";
+        house.basement = "Фундамент";
+        house.adres = "Адрес";
+
+        with(house) {
+            document.write(roof + "<br>");
+            document.write(thirdFloor + "<br>");
+            document.write(secondFloor + "<br>");
+            document.write(firstFloor + "<br>");
+            document.write(basement + "<br>");
+            document.write(adres + "<br>");
+        }
+        */
+
+
+    </script>
+    
+</body>
+</html>

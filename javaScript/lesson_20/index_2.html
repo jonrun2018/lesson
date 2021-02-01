@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        /*
+        let name;
+        let lastName;
+        let age;
+        let repeater;
+
+        function ask() {
+            name = prompt("Введите ваше имя: ");
+            lastName = prompt("Введите вашу фамилию: ");
+            age = prompt("Введите ваш возраст: ");
+        }
+
+        function say() {
+            document.write("Имя: " + name + "<br>");
+            document.write("Фамилия: " + lastName + "<br>");
+            document.write("Возраст: " + age + "<br>");
+            document.write("<hr>");
+        }
+
+    
+        do{
+            ask();
+            say();
+            repeater = confirm("Перезапишите?");
+        }while(repeater == true);
+        */
+
+        /*
+        let a = 10;
+        let b = 15;
+        let c = 20;
+        let d = 21;
+
+        function summ1() {  
+            document.write(a + b);
+        }
+
+        summ1();
+
+        document.write("<hr>");
+
+        function summ2(x1,x2) {
+            document.write(x1 + x2);
+        }
+
+        summ2(a,c);
+        */
+
+        /*
+        function print(msg,count) {
+        if (count == undefined) {
+            count = 3;
+        }
+
+        for (let i = 0; i < count; i++) {
+            document.write("<p>" + msg);
+        }
+        }
+        
+
+        print("hello",7);
+        print("world");
+        */
+
+        /*
+        function Summ(a,b) {
+            return a + b; // код ниже работать не будет
+        }
+
+        function Summ1(a,b) {
+            return a - b; 
+        }
+
+        function Summ2(a,b) {
+            return a * b; 
+        }
+
+        function Summ3(a,b) {
+            return a / b; 
+        }        
+
+        let operand1 = +prompt("Введите первое число: ");
+        let sign = prompt("Введите знак арефметической операции: ");
+        let operand2 = +prompt ("Введите второе число: ")
+        
+        let result;
+
+        switch (sign) {
+            case "+":
+                result = Summ(operand1,operand2)
+                break;
+            case "-":
+                result = Summ1(operand1,operand2)
+                break; 
+            case "*":
+                result = Summ2(operand1,operand2)
+                break;
+            case "/":
+                result = Summ3(operand1,operand2)
+                break;
+            default:
+                document.write("<p><b style = 'color: red;'>" + sign + "</b> Не являеться арефметической операцией");
+        }
+
+        if (result != undefined) {
+            document.write("<p>" + operand1 + " " + sign + " " + operand2 + " = " + result);
+        }
+        */
+
+        /*
+        function max() {
+            let maxValue = Number.NEGATIVE_INFINITY; // самое маленькое число из возмижных
+            document.write("<p>Number.NEGATIVE_INFINITY = " + maxValue + "<hr>")
+            for (let i = 0; i < arguments.length; i++){ //автоматически созданный массив, доступный внутри функции
+                if(arguments[i] > maxValue) {
+                    maxValue = arguments[i];
+                }
+            }
+            return maxValue;
+        }
+
+        let res = max(-33,64,35,32,205,360);
+        document.write("<p>Максимальное значение одного из эллементов функции: " + res);
+        */
+
+        /*
+        function f(x,y,z) {
+            if( arguments.length != 3 ) {
+                document.write("<p><b style='color: red;'>ERROR;</b> <em>Требуеться три аргумента при выборе. Функция вызвана с " + arguments.length + " параметрами!</em>");
+            } else {
+                document.write("<p><spawn style = 'color: green;'>Правильный вызов функции.</spawn> Аргументы: ");
+                for(let i = 0; i < arguments.length; i++){
+                    document.write(arguments[i] + " | ");
+                }
+            }
+        }
+
+        f (1,2,3,4); //error
+        f (1,2,3);
+        */
+
+        //let global = "Глобальная переменная";
+        let local = "Глобальная переменная, однаименая с переменной из function f()"
+
+        function f() {
+            global = "Глобальная переменная";
+            let local = "Локальная переменная";
+
+            document.write("<p style = 'color: navy'>" + global);
+            document.write("<p style = 'color: navy'>" + local);
+
+            document.write("<hr>");
+        }
+
+        f();
+
+        document.write("<p style = 'color: navy'>" + global);
+        document.write("<p style = 'color: navy'>" + local);
+
+    </script>
+</body>
+</html>

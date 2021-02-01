@@ -1,0 +1,108 @@
+@font-face {
+    font-family: 'Grenze Gotisch';
+    src: url('GrenzeGotisch-Light.eot');
+    src: local('Grenze Gotisch Light'), local('GrenzeGotisch-Light'),
+        url('GrenzeGotisch-Light.eot?#iefix') format('embedded-opentype'),
+        url('GrenzeGotisch-Light.woff2') format('woff2'),
+        url('GrenzeGotisch-Light.woff') format('woff'),
+        url('GrenzeGotisch-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Grenze Gotisch';
+    src: url('GrenzeGotisch-Thin.eot');
+    src: local('Grenze Gotisch Thin'), local('GrenzeGotisch-Thin'),
+        url('GrenzeGotisch-Thin.eot?#iefix') format('embedded-opentype'),
+        url('GrenzeGotisch-Thin.woff2') format('woff2'),
+        url('GrenzeGotisch-Thin.woff') format('woff'),
+        url('GrenzeGotisch-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Grenze Gotisch';
+    src: url('GrenzeGotisch-Bold.eot');
+    src: local('Grenze Gotisch Bold'), local('GrenzeGotisch-Bold'),
+        url('GrenzeGotisch-Bold.eot?#iefix') format('embedded-opentype'),
+        url('GrenzeGotisch-Bold.woff2') format('woff2'),
+        url('GrenzeGotisch-Bold.woff') format('woff'),
+        url('GrenzeGotisch-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Grenze Gotisch';
+    src: url('GrenzeGotisch-ExtraBold.eot');
+    src: local('Grenze Gotisch ExtraBold'), local('GrenzeGotisch-ExtraBold'),
+        url('GrenzeGotisch-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('GrenzeGotisch-ExtraBold.woff2') format('woff2'),
+        url('GrenzeGotisch-ExtraBold.woff') format('woff'),
+        url('GrenzeGotisch-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Grenze Gotisch';
+    src: url('GrenzeGotisch-ExtraLight.eot');
+    src: local('Grenze Gotisch ExtraLight'), local('GrenzeGotisch-ExtraLight'),
+        url('GrenzeGotisch-ExtraLight.eot?#iefix') format('embedded-opentype'),
+        url('GrenzeGotisch-ExtraLight.woff2') format('woff2'),
+        url('GrenzeGotisch-ExtraLight.woff') format('woff'),
+        url('GrenzeGotisch-ExtraLight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Grenze Gotisch';
+    src: url('GrenzeGotisch-SemiBold.eot');
+    src: local('Grenze Gotisch SemiBold'), local('GrenzeGotisch-SemiBold'),
+        url('GrenzeGotisch-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('GrenzeGotisch-SemiBold.woff2') format('woff2'),
+        url('GrenzeGotisch-SemiBold.woff') format('woff'),
+        url('GrenzeGotisch-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Grenze Gotisch';
+    src: url('GrenzeGotisch-Regular.eot');
+    src: local('Grenze Gotisch Regular'), local('GrenzeGotisch-Regular'),
+        url('GrenzeGotisch-Regular.eot?#iefix') format('embedded-opentype'),
+        url('GrenzeGotisch-Regular.woff2') format('woff2'),
+        url('GrenzeGotisch-Regular.woff') format('woff'),
+        url('GrenzeGotisch-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Grenze Gotisch';
+    src: url('GrenzeGotisch-Black.eot');
+    src: local('Grenze Gotisch Black'), local('GrenzeGotisch-Black'),
+        url('GrenzeGotisch-Black.eot?#iefix') format('embedded-opentype'),
+        url('GrenzeGotisch-Black.woff2') format('woff2'),
+        url('GrenzeGotisch-Black.woff') format('woff'),
+        url('GrenzeGotisch-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Grenze Gotisch';
+    src: url('GrenzeGotisch-Medium.eot');
+    src: local('Grenze Gotisch Medium'), local('GrenzeGotisch-Medium'),
+        url('GrenzeGotisch-Medium.eot?#iefix') format('embedded-opentype'),
+        url('GrenzeGotisch-Medium.woff2') format('woff2'),
+        url('GrenzeGotisch-Medium.woff') format('woff'),
+        url('GrenzeGotisch-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+

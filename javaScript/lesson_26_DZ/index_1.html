@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+            function checkP() {
+                let arr = document.getElementsByTagName('p');
+                for (let i = 0; i < arr.length; i++) {
+                    arr[i].style.border = '1px solid red';
+                    arr[i].style.display = 'inline-block';
+                }
+            }
+
+            function checkA() {
+                let arr = document.getElementsByTagName('a');
+                for (let i = 0; i < arr.length; i++) {
+                    arr[i].style.border = '1px solid green';
+                    arr[i].style.display = 'inline-block';
+                }
+            }
+
+            function checkDiv() {
+                let arr = document.getElementById('test_div');
+                arr.style.border = '1px solid yellow';
+                arr.style.display = 'inline-block';
+            }
+
+
+    </script>
+</head>
+<body>
+
+    <p>параграф</p>
+    <p>параграф</p>
+    <div id="test_div">блок</div>
+    <a href="">ссылка</a><br>
+    <a href="">ссылка</a>
+
+    <br>
+    <br>
+
+    <input type="button" onclick="checkP()" value = "Выбрать все параграфы">
+    <input type="button" onclick="checkA()" value = "Выбрать все ссылки">
+    <input type="button" onclick="checkDiv()" value = "Выбрать блок">
+    
+</body>
+</html>

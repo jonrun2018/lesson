@@ -1,0 +1,86 @@
+* {
+    box-sizing: border-box;
+}
+
+.block {
+    display: flex;
+}
+
+.item {
+    width: 200px;
+    height: 200px;
+    margin: 15px;
+    background: rgba(0, 0, 0, 0.596);
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.block_1 .item_1 {
+    background-image: url(../icons/facebook.png);
+}
+
+.block_1 .item_2 {
+    background-image: url(../icons/twitter.png);
+}
+
+.block_1 .item_3 {
+    background-image: url(../icons/vk.png);
+}
+
+.block_1 .item_4 {
+    background-image: url(../icons/youtube.png);
+}
+
+.block_2 .item {
+    background-size: 50%;
+}
+
+.block_2 .item_1 {
+    background-image: url(../icons/facebook.svg);
+}
+
+.block_2 .item_2 {
+    background-image: url(../icons/twitter.svg);
+}
+
+.block_2 .item_3 {
+    background-image: url(../icons/vk.svg);
+}
+
+.block_2 .item_4 {
+    background-image: url(../icons/youtube.svg);
+}
+
+.block_4 svg {
+    width: 128px;
+}
+
+.block_4 svg path {
+    fill:red;
+}
+
+.block_4 svg[width="512pt"] path:nth-child(2){
+    fill:green;
+}
+
+.block_4 svg[width="512pt"] path:nth-child(3){
+    fill:black;
+}
+
+.block_4 svg[width="512pt"] path:nth-child(4){
+    fill:blue;
+}
+
+.block_5 {
+    font-size: 100px;
+    color: blue;
+}
+
+.block_6 .icon {
+    font-size: 100px;
+    color:green;
+}

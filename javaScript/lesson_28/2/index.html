@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // переход на страницу при нажатии кнопки
+        window.onload = () => {
+            document.getElementById("go").onclick = () => {
+                document.location = "https://yandex.ru"
+            }
+        }
+        let browserinfo = "Сведения о браузере:\n";
+        for(let propname in navigator) {
+            browserinfo += propname + ": " + navigator[propname] + "\n";
+        }
+        alert(browserinfo);
+    </script>
+</head>
+<body>
+    
+    <input type="button" id="go" value="yandex.ru">
+
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        /*
+        let menedger = new Object ();
+        menedger.name = "Jon";
+        menedger.secondName = "Smit";
+        menedger.age = "18";
+        */
+
+        /*
+        function Secretar(){               
+        }
+
+        let sec = new Secretar();
+
+        sec.name = "Lena";
+        sec.secondName = "Smit";
+        sec.age = "23";
+
+        document.write(sec.name);
+        */
+
+        let doc = new Object();
+
+        doc.header = "header";
+        doc.body = "body";
+        doc.footer = "footer";
+        doc.data = "data";
+
+        let n;
+
+        doc.add = function(body,header,footer,data) {
+            this.body = body;
+            this.header = header;
+            this.footer = footer;
+            this.data = data;
+
+            // создаем новый объект
+            n =  prompt();
+            let value = prompt();
+            doc[n] = value;
+        }
+
+        doc.view = function(a) {
+            document.write(a + "<br>");
+        }
+
+        doc.app = new Object();
+        doc.app.header = "header";
+        doc.app.body = "body";
+        doc.app.footer = "footer";
+        doc.app.data = "data";
+
+        let body = prompt("Введите значение div:");
+        let header = prompt("Введите значение header:");
+        let footer = prompt("Введите значение footer:");
+        let data = prompt("Введите значение data:");
+        
+        doc.add( body,header,footer);
+
+        doc.view("Значение header: " + doc.header);
+        doc.view("Значение body: " + doc.body);
+        doc.view("Значение footer: " + doc.footer);
+        doc.view("Значение data: " + doc.data);
+        doc.view("Значение name: " + doc[n]);
+
+    </script>
+
+</body>
+</html>

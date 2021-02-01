@@ -1,0 +1,52 @@
+*{
+    box-sizing: border-box;
+}
+
+.menu {
+    margin-top: 300px;
+}
+
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+
+.menu ul a {
+    background-color: grey;
+    display: inline-block;
+    padding: 5px 20px;
+    text-decoration: none;
+    color: white;
+}
+
+.menu ul a:hover {
+    background-color: rgba(136, 136, 136, 0.973);
+}
+
+.menu ul li {
+    position: relative;
+}
+
+.menu ul .lv2{
+    position: absolute;
+    top: 0;
+    left: 120%;
+    width: 200px;
+    flex-direction: column;
+    display: none; /* скрывает список */
+}
+
+.menu ul li:hover ul.lv2 {
+    display: flex;
+}
+
+.menu ul.lv2 .lvl_3{
+    display: none !important;
+}
+
+.menu ul li ul.lv2:hover ul.lvl_3 {
+    display: flex !important;
+}
+

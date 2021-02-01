@@ -1,0 +1,201 @@
+* {
+    box-sizing: border-box;
+}
+
+.header {
+    background: url(../images/header.jpg);
+    height: 160px;
+    margin-bottom: 0px;
+}
+
+.content {
+    display: flex;
+}
+
+.body {
+    margin: 40px auto 0;
+    width: 762px;
+    border: 1px solid white;
+}
+
+.menu {
+    height: 28px;
+    margin-top: -15px;
+    margin-bottom: 15px;
+    background: linear-gradient(to bottom, white, #dbdbdd);
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    margin-right: 30px;
+}
+
+.menu ul li{
+    margin: 0 auto;
+    margin-top: 2px;
+}
+
+.menu ul li a{
+    font-size: 20px;
+    text-decoration: none;
+    color: green;
+    font-family: sans-serif;
+}
+
+.menu ul li a:hover {
+    color: #d80621;
+}
+
+.left_block {
+    width: 547px;
+}
+
+.left_block div .text {
+    text-indent: 20px;
+    font-size: 14px;
+    font-family: sans-serif;
+}
+
+.left_block_img1 {
+    background: url(../images/venzel.jpg);
+    width: 317px;
+    height: 20px;
+    margin-top: 15px;
+}
+
+.left_block_p {
+    width: 314px;
+    height: 326px;
+    display: inline-block;
+    margin-left: 16px;
+}
+
+.left_block_img2 {
+    background: url(../images/Pig1.jpg);
+    width: 201px;
+    height: 287px;
+    float: right;
+
+}
+
+.left_block_img3 {
+    background: url(../images/Pig2.jpg);
+    height: 200px;
+    width: 200px;
+    margin-left: 16px;
+    margin-top: -17px;
+    display: inline-block;
+}
+
+.left_block_list {
+    height: 200px;
+    width: 331px;
+    float: right;
+    margin-top: -30px;
+
+}
+
+.left_block_list .p {
+    text-align: center;
+    font-size: 19px;
+    font-weight: 900;
+    color: rgb(212, 118, 46);
+}
+
+.left_block_list ol a{
+    color: #2aaf18;
+    font-weight: 900px;
+    text-decoration: none;
+}
+
+.left_block_list ol{
+    color: rgb(173, 173, 183);
+    display: inline-block;
+    font-size: 15px;
+    margin-top: 10px;
+    font-family: sans-serif;
+}
+
+.left_block_img4 {
+    background: url(../images/line.jpg) repeat-y;
+    height: 10px;
+    width: 305px;
+    margin: 42px auto;
+}
+
+.right_block {
+    width: 184px;
+    height: 415px;
+    background: #ffffcd;
+    margin-left: 29px;
+}
+
+.right_block_h1 {
+    text-align: center;
+    color: #ee6b03;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: sans-serif;
+}
+
+.right_block_img {
+    background: url(../images/marker.jpg);
+    width: 15px;
+    height: 17px;
+    float: left;
+}
+
+.right_block_text {
+    text-indent: 7px;
+    font-family: sans-serif;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+.bottom {
+    background: #656656;
+    position: relative;
+    height: 46px;
+    margin-top: 9px;
+}
+
+.bottom_ul {
+    list-style: none;
+    display: flex;
+    position: absolute;
+    margin-top: 9px;
+    margin-left: 176px;
+}
+
+.bottom_ul li a {
+    text-decoration: none;
+    border-left: 1px solid white;
+    color: #cbcc28;
+    font-family: sans-serif;
+    font-size: 12px;
+    font-weight: bolder;
+    margin-right: 4px;
+}
+
+.bottom_ul li a:hover {
+    color:white;
+}
+
+.bottom_ul_2 {
+    list-style: none;
+    display: flex;
+    color: white;
+    position: absolute;
+    margin-left: 186px;
+    margin-top: 25px;
+}
+
+.bottom_ul_2 li {
+    font-family: sans-serif;
+    font-size: 11px;
+    border-left: 1px solid white;
+    margin-right: 6px;
+}
+
+

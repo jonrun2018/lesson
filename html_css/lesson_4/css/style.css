@@ -1,0 +1,119 @@
+*{
+    box-sizing: border-box;
+}
+
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.menu ul a {
+    background-color: grey;
+    display: inline-block;
+    padding: 5px 20px;
+    text-decoration: none;
+    color: white;
+}
+
+.menu ul a:hover {
+    background-color: rgba(136, 136, 136, 0.973);
+}
+
+.menu ul li {
+    position: relative;
+}
+
+.menu ul .lv2{
+    position: absolute;
+    left: 0;
+    width: 200px;
+    flex-direction: column;
+    display: none; /* скрывает список */
+}
+
+.menu ul li:hover ul.lv2 {
+    display: flex;
+}
+
+
+/*
+.red_ball {
+    background-color: red;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border-top-left-radius: 0px; /* убираем скругление с верхнего левого угла */
+/*    margin: 40px auto 0;
+    border-bottom-right-radius: 0px;
+}
+
+.triangle { /* делаем треугольник */
+/*    width: 0;
+    height: 0;
+    border-left: 50px solid transparent; /* прозрачный */
+/*    border-right: 50px solid transparent;
+    border-bottom: 100px solid green;
+    position: absolute;
+    top: calc(50% - 70px);
+    right: calc(50% - 70px);
+
+
+/*
+    right: 0;
+    left: 0;
+
+
+/*  margin: 0 auto;
+
+/*  position: fixed; /* прокручиваеться вместе со страницой */
+/*  top: calc(50% - 50px); */
+/*  top: 50%;
+    margin-top: -50px; */
+/*  bottom: 0; */
+/*  position: relative;
+    top:  -40px;
+    left: 50px;   
+*/ 
+/*}
+
+.green {
+    z-index: 80; 
+}
+
+.red {
+    border-bottom-color: red;
+    top: calc(50% - 50px);
+    right: calc(50% - 50px);
+    z-index: 70; 
+    
+}
+
+.blue {
+    border-bottom-color: blue;
+    top: calc(50% - 30px);
+    right: calc(50% - 30px); 
+}
+
+
+
+
+
+/*.wrapper {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    border: 1px solid black;
+}
+
+.triangleLeft { /* треугольник смотрит в право */
+/*    width: 0;
+    height: 0;
+    border-top: 50px solid transparent;
+    border-bottom: 50px solid transparent;
+    border-left: 100px solid yellow;
+}
+*/
+

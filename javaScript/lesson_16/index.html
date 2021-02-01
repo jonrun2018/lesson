@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        /*
+        let a = confirm("Принять первое значение как верное?");
+        let b = confirm("Принять второе значение как верное?");
+        */
+
+        /*
+        if (a) {
+            document.write('<p>Первое значение ИСТИНА');
+        } else {
+            document.write('<p>Первое значение ЛОЖЬ');
+        }
+
+        if (b) {
+            document.write('<p>Первое значение ИСТИНА');
+        } else {
+            document.write('<p>Первое значение ЛОЖЬ');
+        }*/
+
+        /*
+        if (a == true && b ==true) {
+            document.write("Оба значения ИСТИНА");
+        } else if (a == true && b ==false) {
+            document.write("Первое значение ИСТИНА, второе ЛОЖЬ");
+        } else if (a == false && b == false) {
+            document.write("Оба значения ЛОЖЬ");
+        } else {
+            document.write("Так нельзя!!!");
+        }
+
+        if (a && b) {
+            document.write("Оба значения ИСТИНА");
+        } else if (a || b) {
+            document.write("Первое значение ИСТИНА, второе ЛОЖЬ");
+        } else {
+            document.write("Оба значения ЛОЖЬ");
+        }
+        */
+
+        /*
+        let age = +prompt("Введите ваш возраст");
+        let pen = +prompt("Введите пенсионный возвраст");
+
+        let maxAge = 120;
+
+        if (age < pen) {
+            document.write("Вам еще рано на пенсию");
+        } else if (age < maxAge) {
+            document.write("Пора задуматься о пенсии");
+        } else {
+            document.write("Столько не живут");
+        }
+        */
+
+        /*
+        let number = prompt("Введите 1 или 2");
+
+        switch (number) {
+
+            case "1":
+            {
+                document.write("1");
+            }
+            break;
+
+            case "2":
+            {
+                document.write('2');
+            }
+            break;
+
+            default:
+            {
+                document.write("Нельзя!!!")
+            }
+        }
+        */
+
+        /*
+        let day = prompt("Введите номер дня недели");
+
+        switch (day) {
+            case "1":
+            case "2":
+            case "3":
+            case "4":
+            case "5":
+            {
+                document.write("Рабочий день: ");
+            }
+
+            case "1":
+            {
+                document.write("Понедельник");
+            }
+            break;
+
+            case "2":{
+                document.write("Вторник");
+            }
+            break;
+
+            case "3":{
+                document.write("Среда");
+            }
+            break;
+
+            case "4":{
+                document.write("Четверг");
+            }
+            break;
+
+            case "5":{
+                document.write("Пятница");
+            }
+            break;
+
+            case "6":
+            case "7":
+            {
+                document.write("Выходной: ");
+            }
+
+            case "6":{
+                document.write("Суббота");
+            }
+            break;
+
+            case "7":{
+                document.write("Воскресенье");
+            }
+            break;
+
+            default:{
+                document.write("Нельзя так вводить!!!");
+            }
+
+        }
+        */
+    </script>
+
+    <style>
+        img {
+            object-fit: cover;
+        }
+    </style>
+
+</head>
+<body>
+
+    <script>
+
+        /*
+        let coffeSize = prompt ("Размер стаканчика кофе: 1 - маленький, 2 - средний, 3 - большой. Пожалуйста сделайте свой выбор");
+        let cost = 0;
+
+        switch (coffeSize) {
+            case "1":
+            {
+                cost += 25;
+                document.write('<img src="image/6.jpg" alt="" width="50px" height="50px">');
+            }
+            break;
+
+            case "2":
+            {
+                cost += 50;
+                document.write('<img src="image/6.jpg" alt="" width="150px" height="150px">');
+            }
+            break;
+
+            case "3":
+            {
+                cost += 75;
+                document.write('<img src="image/6.jpg" alt="" width="250px" height="250px">');
+            }
+            break;
+
+            default:
+            {
+                document.write("Неверный выбор");
+            }
+        }
+
+        if ( cost != 0) {
+            document.write("<p>Внесите " + cost + "рублей.<p> Спасибо.");
+        } else {
+            coffeSize = prompt ("Размер стаканчика кофе: 1 - маленький, 2 - средний, 3 - большой. Пожалуйста сделайте свой выбор");
+        }
+        */
+
+        /*
+        let a = 10, b = 20;
+
+        (a > b) ? console.log('a больше') : console.log("b больше");
+        */
+
+        /*
+        let a = 1, b = 2, max = 0;
+
+        //a > b ? max = a : max = b;
+
+        max = (a > b) ? a : b;
+
+        console.log(max);
+        */
+
+        let quantity = 10;
+        let price = 100;
+        let discount = 0.75;
+        let cost;
+
+        cost = quantity >= 10 ? quantity * price * discount : quantity*price;
+
+        document.write("Будет стоить: " + cost);
+
+    </script>
+    
+</body>
+</html>

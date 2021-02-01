@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        //свойства
+        /*
+        let arr = ["Semt","Oct","Nov","Dec","Jan","Feb"];
+
+        document.write(arr);
+
+        let res = arr.join(" | "); // меняет запятые в массивы на указанные символы, преобразует все элементы в строку
+        document.write("<p>" + res);
+
+        res = arr.join("<br>");
+        document.write("<p>" + res);
+        */
+
+        /* // делаем список из массива
+        let arr = ["Semt","Oct","Nov","Dec","Jan","Feb"];
+
+        document.write("<ul><li>");
+        document.write(arr.join("</li><li>"));
+        document.write("</li></ul>");
+        */
+
+        /*
+        typeof(arr); //возвращает свойство элемента
+        */
+
+        /*
+        let array = [1,2,3];
+
+        array = array.concat(4,5); //дописываем массив
+
+        document.write("<p>" + array);
+
+        array = array.concat(6,7,[8,9]);
+
+        document.write(array);
+        */
+
+        /*
+        let a = [1,2,3];
+
+        for(;;){
+            let b = +prompt("Введите число");
+            if (b) {
+                a = a.concat(b);
+            } else {
+                break;
+            }
+        }
+
+        document.write(a.join("<br>"));
+        */
+
+        /* // меняет элемнты массива местами
+        let array = [1,2,3,4,5,6,7];
+        array.reverse();
+
+        document.write(array.join("<br>"));
+        */
+
+        /*
+        //slice - возвращает фрагмент или подмассив указанного массива
+        let array = [1,2,3,4,5,6,7];
+
+        let temp = array.slice(0,3);
+
+        document.write(temp.join("<br>"));
+
+        temp = array.slice(3);
+
+        document.write("<br><br>" + temp.join("<br>"));
+
+        temp = array.slice(1,-1);
+
+        document.write("<br><br>" + temp.join("<br>"));
+        */
+
+        /*
+        let array = ["slovo_1","slovo_2","slovo_3","slovo_4","slovo_5","slovo_6",
+        "slovo_7","slovo_8","slovo_9","slovo_10","slovo_11",
+        "slovo_12","slovo_13","slovo_14","slovo_15","slovo_16"];
+
+        document.write("<p>" + array.join(", "));
+
+        let from = 3;
+        let to = 12;
+
+        let res = array.slice(from,too);
+
+        document.write("<br><br>" + res.join("<br>"));
+        */
+
+        /*
+        // splice - вставляет, удаляет элемменты массива, возвращает удаленные эллементы
+        
+        let array = [1,2,3,4,5,6,7,8,9];
+        document.write(array);
+
+        //удаление
+
+        let d = array.splice(1,3);
+        document.write("<p>Удалены элементы: " + d);
+        document.write("<p>Остались: " + array);
+
+        //добавление элементов
+        
+        array.splice(1,0,2,3,4); // 0 - значит что нечего не удаляем
+        document.write("<p>" + array);
+        */
+
+        /*
+        let Students = ["jon","jordg","met","diego","forest","don",
+        "fesco","lena","leha"];
+
+        let a = prompt("С какого именни начать удалять?");
+        let b = prompt("До какого именни");
+
+        let res = Students.splice(a,b);
+
+        document.write(res.join("<br>"));
+        */
+
+        /*
+        // sort - сортирует массив как строчные эллементы  (хреново)
+        let array = [4,1,6,2,8,3];
+        document.write(array.sort() + "<br>");
+
+        let arr = ['sept','nov','okt','feb','dec']; // строки сортируе нормально
+        document.write(arr.sort() + "<br>");
+        */
+
+        /*
+        // push - добовляет элементы массива и возвращает длину массива
+        let array = [1,54,234,56,65];
+        document.write(array.join(" "));
+        document.write("<br>" + array.length);
+        document.write('<hr>');
+
+        let length = array.push(7);
+        document.write('<br>' + array.join(" "));
+        document.write('<br>' + length);
+
+        document.write('<hr>');
+        length = array.push(09,45,43);
+        document.write('<br>' + array.join(" "));
+        document.write('<br>' + length);
+        */
+
+        /*
+        // pop - удаляет последний элемент массива и возвращает его длину
+        let array = [21,32,321,32,56,45];
+        let length = array.pop();
+
+        document.write(array + '<br>');
+        document.write(array.length + '<br>');
+        document.write(length);
+        */
+
+        /*
+        //shift - адаляет первый эллемент массива и возвращает его
+        let array = [21,32,321,32,56,45];
+        let length = array.shift();
+
+        document.write(array + '<br>');
+        document.write(array.length + '<br>');
+        document.write(length);
+        */
+
+        /*
+        //unshift
+        let array = [21,32,321,32,56,45];
+        let length = array.unshift(0,65,13);
+
+        document.write(array + '<br>');
+        document.write(array.length + '<br>');
+        */
+
+        /*
+        // выводим самое большое число в массиве
+        let array = [1,3,23,45,34,23,7,100];
+
+        let max = array[0];
+        
+        for (let a = 1; a < array.length; a++) {
+            if (array[a] > max) {
+                max = array[a];
+            }
+        }
+
+        document.write(max);
+        */
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

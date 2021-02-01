@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        // let now = new Date();
+        // document.write(now + "<br>");
+
+        // now = new Date(5000); // (00:00 + 3 часа смещение по москве )1 января 1970 + 5000 милисекунд
+        // document.write(now + "<br>");
+
+        // let date = new Date("December 25, 1995 21:46:40");
+        // document.write(date + "<br>");
+
+        // let date2 = new Date("03/09/2000");
+        // document.write(date2 + "<br>");
+
+        // let date3 = new Date("2000, 3, 9");
+        // document.write(date3 + "<br>");
+
+        let date = new Date('01/24/2021');
+
+        document.write(date.getDate() + "<br>"); // вернет число месяца
+        document.write(date.getMonth() + "<br>"); // вернет индекс месяца
+        document.write(date.getFullYear() + "<br>"); // вернет год
+        document.write(date.getYear() + "<br>"); // вернет количество лет с 1990 года
+        document.write(date.getDay() + "<br>"); // вернет день недели (число, воскресенье это 0)
+        document.write(date.getHours () + "<br>"); // вернет часы
+        document.write(date.getMinutes () + "<br>"); // вернет минуты
+        document.write(date.getSeconds () + "<br>"); // вернет секунды
+        document.write(date.getMilliseconds() + "<br>"); // вернет милисекунды
+        document.write(date.getTime() + "<br>"); // вернет милисекунд прошедших с 1 января 1970
+        
+        document.write("<hr>");
+        
+        date.setDate(27) // устанавливаем число в дату
+        document.write(date.setDate() + "<br>");
+
+        date.setMonth (4) // устанавливаем месяц в дату
+        document.write(date.setMonth() + "<br>");
+
+        date.setFullYear (2005) // устанавливаем год в дату
+        document.write(date.setFullYear() + "<br>");
+
+        date.setHours (5) // устанавливаем часы в дату
+        document.write(date.setHours() + "<br>");
+
+        date.setMinutes (55) // устанавливаем минуты в дату
+        document.write(date.setMinutes() + "<br>");
+
+        date.setSeconds (55) // устанавливаем секунды в дату
+        document.write(date.setSeconds() + "<br>");
+
+        date.setMilliseconds (55) // устанавливаем милисекунды в дату
+        document.write(date.setMilliseconds() + "<br>");
+
+        date.setTime(5000) // + к 1января 1970
+        document.write(date + "<br>");
+
+    </script>
+
+    <input type="date">
+    
+</body>
+</html>

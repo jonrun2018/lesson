@@ -1,0 +1,72 @@
+*{
+    box-sizing: border-box;
+}
+
+.gradient {
+    height: 300px;
+    background: linear-gradient( 45deg, rgba(128, 0, 60, 0.632) 20%, rgba(86, 153, 19, 0.521) 20%, 
+    rgba(84, 160, 9, 0.521) 80%, rgba(0, 81, 255, 0.541) 80%),
+    linear-gradient( -45deg, rgba(0, 109, 128, 0.632) 20%, rgba(97, 100, 96, 0.521) 20%, 
+    rgba(105, 97, 97, 0.521) 80%, rgba(208, 255, 0, 0.541) 80%); /* линейный градиент, to right */
+}
+
+.block1 {
+    margin: 50px;
+    height: 200px;
+    background: radial-gradient( white, rgb(255, 110, 110)); /* радиальный градиент */
+}
+
+.block2 {
+    margin: 50px 0;
+    height: 200px;
+    background: radial-gradient(at top left, white, rgb(111, 172, 230)); /* радиальный градиент */
+}
+
+.block3 {
+    margin: 50px 0;
+    height: 200px;
+    background: radial-gradient(40% 50%, white, rgb(14, 54, 92)); /* радиальный градиент */
+}
+
+.block4 {
+    margin: 50px 0;
+    height: 200px;
+    background: radial-gradient(circle closest-corner at 100px 50px, rgb(126, 56, 56), rgb(15, 1, 92)); /* радиальный градиент fathest-corner - до дальнего угла, closest-coner - до ближнего угла, fathest-site - до дальней стороны, closes-site - до ближней стороны */
+}
+
+.block5 {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 50px auto 0;
+    background: radial-gradient(circle at 65% 15%, aqua, blue);
+}
+
+.wrap {
+    height: 200px;
+    padding: 50px 0;
+    margin: 0 auto;
+    background: #ccc;
+}
+
+.buttom {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 auto;
+    background: radial-gradient(farthest-side ellipse at top left, #fff, #aaa);
+    box-shadow: 5px 10px 20px rgba(0, 0, 0,.3),
+                -5px -10px -20px rgba(255, 255, 255,.5);
+}
+
+.block6 {
+    height: 200px;
+    margin: 50px auto;
+    background: repeating-linear-gradient(45deg, #606dbc, #606dbc 10px, #465298 10px, #465298 20px, red 20px, red 30px);
+}
+
+.block7 {
+    height: 200px;
+    margin: 50px auto;
+    background: repeating-radial-gradient(circle, #606dbc, #606dbc 10px, #465298 10px, #465298 20px, red 20px, red 30px);
+}

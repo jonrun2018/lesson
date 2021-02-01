@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = () => {
+
+            function $(id) {
+                return document.getElementById(id);
+            }
+
+            $('encodeBtn').onclick = function () {
+                let res = encodeURIComponent($('forEncode').value)
+
+                $('encodecodedOutput').innerHTML = res;
+            }
+
+            $('decodeBtn').onclick = function () {
+                let res = decodeURIComponent($('forDecode').value)
+
+                $('decodeodedOutput').innerHTML = res;
+            }
+        }
+    </script>
+</head>
+<body>
+    Текст для кодирования <input type="text" id="forEncode">
+    <input type="button" id="encodeBtn" value="Кодировать">
+    <p id="encodecodedOutput"></p>
+
+    Текст для декодирования <input type="text" id="forDecode">
+    <input type="button" id="decodeBtn" value="Кодировать">
+    <p id="decodeodedOutput"></p>
+    
+</body>
+</html>

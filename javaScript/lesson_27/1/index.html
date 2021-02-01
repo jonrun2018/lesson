@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function sortChildren(e) {
+            if (typeof e == 'string') e = document.getElementById(e);
+        
+            //Преобразовываем дочерние эллементы в массив
+            let children = [];
+            for(let x = e.firstChild; x != null; x = x.nextSibling) {
+                if(x.nodeType == 1) children.push(x);
+            }
+
+            //Сортировка
+            children.sort(function(n,m) {
+                let s = n.firstChild.data; // s = one
+                let t = m.firstChild.data; // t = two
+                if (s < t) return -1; //n перед m
+                else if (s > t) return 1; //m перед n
+                else return 0; // m равно n
+            });
+
+            for(let i = 0; i < children.length; i ++) {
+                e.appendChild(children[i]);
+            }
+        }
+    </script>
+</head>
+<body>
+    
+    <ul id="mylist">
+        <li>one</li>
+        <li>two</li>
+        <li>three</li>
+        <li>four</li>
+        <li>aaaaour</li>
+        <li>bbbbour</li>
+    </ul>
+    <button onclick="sortChildren('mylist')">Sort list</button>
+
+</body>
+</html>

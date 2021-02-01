@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        /*
+        let point = new Object ();
+        point.x = 10;
+        point.y = 10;
+
+        document.write("Значение x: " + point.x + "<br>");
+        document.write("Значение y: " + point.y + "<br>");
+
+        document.write("<hr>");
+
+        let myDate = new Date();
+        document.write("Текущее время и дата: " + myDate);
+        */
+
+        /*
+        let a = new Array();
+        let b = Array(1,2,3,4,5,6,7);
+        document.write(b + "<br>");
+
+        let c = Array(10);
+        document.write(c + "<br>");
+        
+        document.write("<hr>");
+        */
+
+
+        /*
+        //Работа со строками
+        let simpleStr = "My String";
+        let objectStr = new String("some String object");
+
+        function f(a) {
+            document.write(a + "<br>");
+            document.write("<hr>");
+        }
+
+        f(simpleStr);
+        f(objectStr);
+
+        objectStr.last = 12;
+
+        f(objectStr.last);
+        */
+
+        /*
+        //функция конструктор (class);
+        let func = new Function ("x","y","return x + y;");
+
+        let result = func(20,30);
+
+        document.write(result);
+        */
+
+        /*
+        let a = new Function("alert('Hello');");
+
+        a();
+        */
+
+        /*
+        //Другой вариант работы с функцией конструктором
+        function Point(x,y) {
+            this.x = x;
+            this.y = y;
+        }
+
+        //создаем экземпляры класса поинт
+        let leftTop = new Point(0,0);
+        let topPoint = new Point(15,30);
+        let rightBottom = new Point(30,30);
+
+        // Вывод координаты класса
+        document.write("Координаты нашего треугольника: <br><br>");
+        document.write("Координаты первой точки: " + leftTop.x + ", " + leftTop.y + "<br>");
+        document.write("Координаты второй точки: " + topPoint.x + ", " + topPoint.y + "<br>");
+        document.write("Координаты третей точки: " + rightBottom.x + ", " + rightBottom.y + "<br>");
+        */
+
+        /*
+        function Human(name) {
+            this.name = name;
+
+            this.sayHello = function() {
+                document.write("Hello! My name is " + name + "<br>")
+            }
+        }
+
+        let Ivan = new Human("Ivan");
+        let Petr = new Human("Petr");
+
+        Ivan.sayHello();
+        Petr.sayHello();
+        */
+
+        /*
+        let Friend = function(mood) {
+            this.mood = mood;
+
+            if(mood === "nice"){
+                this.talk = function(){
+                    alert("Hello, what's up?");
+                }
+            } else if(mood === "bad") {
+                this.talk = function(){
+                    alert("Sorry, I don't want talk with you.");
+                }
+            } else {
+                this.talk = function(){
+                    alert("Hi");
+                }
+            }
+        }
+
+        friendMoon = prompt("Укажите настроение друга (nice/bad):");
+        let Ivan = new Friend(friendMoon);
+
+        Ivan.talk();
+        */
+
+        /*
+        function Point(x,y) {
+            // свойства экземпляров
+            this.x = x;
+            this.y = y;
+
+            // методы экземпляров
+            this.print = function() {
+                document.write("(" + this.x + ", " + this.y + ")<br>");
+            }
+        }
+
+        // cвойство функции - конструктора
+        Point.MaxPointCount = 100;
+
+        // метод функции - конструктора
+        Point.getOrigin = function() {
+            return new Point(0,0); //this использовать нельзя
+        }
+
+        let p1 = new Point(100,200);
+
+        p1.x = 300;
+        p1.y = 300;
+
+        p1.print();
+
+        let p2 = new Point(100,200);
+
+        p2.print();
+
+        Point.MaxPointCount = 10;
+        document.write(Point.MaxPointCount + "<br>");
+
+        Point.getOrigin().print();
+        */
+
+        /*
+        function Rectangle(w,h) {
+            this.w = w;
+            this.h = h;
+
+            this.p = function(){
+                return(this.w*this.h);
+            }
+        }
+
+        
+        let result = new Rectangle ();
+        result.w = +prompt("Введите ширину");
+        result.h = +prompt("Введите высоту");
+
+        document.write(result.p());
+        */
+
+        
+
+
+    </script>
+
+</body>
+</html>

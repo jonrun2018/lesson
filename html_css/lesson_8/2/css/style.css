@@ -1,0 +1,60 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 580px;
+}
+
+.wrap {
+    width: 120px;
+    height: 120px;
+    background: #e6e0ca;
+    display: inline-block;
+    margin: 80px;
+}
+
+h3 {
+    margin: 0;
+    text-align: center;
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.element {
+    width: 120px;
+    height: 120px;
+    color: white;
+    text-align: center;
+    line-height: 120px;
+    animation: rotate 6s linear infinite;
+}
+
+.element-1 {
+    background: #ffcc00;
+}
+
+.element-2 {
+    background: green;
+    transform-origin: top left;
+}
+
+.element-3 {
+    background: red;
+    transform-origin: 110% 110%;
+}
+
+.element-4 {
+    background: blueviolet;
+    transform-origin: 50px 50px;
+}

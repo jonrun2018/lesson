@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 150px;
+            height: 150px;
+            object-fit: contain;
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+        // canvas
+
+        // window.onload = () => {
+        //     let img1 = document.getElementById('logoimg');
+        //     let img2 = document.images.logo;
+        //     let img3 = document.images["logo"];
+        //     let img4 = document.logo;
+        // }
+
+        window.addEventListener("load", function(){
+            let flag;
+            document.getElementById("changeBtn").addEventListener("click", function(){
+                if(flag){
+                    document.getElementById("imgBtn").src ="1.jpg";
+                } else {
+                    document.getElementById("imgBtn").src ="2.jpg";
+                }
+
+                flag = !flag;
+            })
+        });
+
+    </script>
+    
+    <!-- <img id="logoimg" src="1.jpg" name="logo" alt="Логотип">  -->
+    <img id="imgBtn" src="1.jpg" alt="button">
+    <button id="changeBtn">Изменить</button>
+
+</body>
+</html>

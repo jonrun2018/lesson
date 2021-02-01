@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        window.onload = () => {
+            let main = document.getElementById("main");
+
+            main.onkeydown = function(e) {
+                clear();
+                print("alt = " + e.altKey);
+                print("cntr = " + e.ctrlKey);
+                print("shift = " + e.shiftKey);
+                print("charCode = " + e.charCode);
+                print("keyCode = " + e.keyCode);
+            }
+
+            // main.onkeydown = function () { //onkeydown - нажатие на любую клавишу
+            //     print("onkeydown event");
+            // }
+
+            // main.onkeyup = function () { //onkeyup - отпускание на любую клавишу
+            //     print("onkeyup event");
+            // }
+
+            // main.onkeypress = function () { //onkeypress - отпускание и нажатие на любую клавишу
+            //     print("onkeyup event");
+            // }
+
+            function print(message) {
+                document.getElementById("output").innerHTML += message + "<br>";
+
+            }
+
+            function clear() {
+                document.getElementById("output").innerHTML = "";
+            }
+        }
+
+    </script>
+</head>
+<body id="main">
+    
+    <p>Начните нажимать клавиши на клавиатуре</p>
+    <p id="output"></p>
+
+</body>
+</html>

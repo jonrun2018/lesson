@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        let array = [1,3,23,250,0,45,34,23,7,100,10];
+        
+        // выводим самое большое число в массиве
+        let max = array[0];
+
+        for (let a = 1; a < array.length; a++) {
+        if (array[a] > max) {
+            max = array[a];
+        }
+        }
+
+        document.write(max + "<br>");
+
+        // выводим самое маленькое число в массиве
+        let min = array[0];
+
+        for (let a = 1; a < array.length; a++) {
+        if (array[a] < min) {
+            min = array[a];
+        }
+        }
+
+        document.write(min + "<br>");
+
+        // выводим общую сумму элементов массива
+        let summ = 0;
+
+        for (let a = 0; a < array.length; a++) { 
+            summ += array[a];
+        }
+
+        document.write(summ + "<br>");
+
+        // выводим среднее арефметическое всех элементов
+        let res = 0;
+        let result;
+
+        for (let a = 0; a < array.length; a++) {
+            res += array[a];
+        }
+
+        result = res / array.length;
+
+        document.write(result + "<br>");
+        
+        // выводим все нечетные элементы массива
+        for (let a = 0; a < array.length; a++) {
+            if (array[a]%2 == 1) {
+                document.write(array[a] + "<br>");
+            } else {
+                continue;
+            }
+        }
+
+    </script>
+    
+</body>
+</html>

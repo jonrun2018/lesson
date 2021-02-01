@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            background-color: #ceffff;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+    <script>
+        window.addEventListener("load", init, false);
+
+        function init() {
+            let div = document.getElementsByTagName('div')[0];
+            div.addEventListener("mousemove", handler, false);
+        }
+
+        function handler(e) {
+            let message = "";
+            message += e.button + "<br>"; // 0 -левая кнопка мышиб 1 - средняяб 2 - правая
+            message += "Alt: " + e.altKey + "<br>";
+            message += "Ctrl: " + e.ctrlKey + "<br>";
+            message += "Shift: " + e.shiftKey + "<br>";
+            message += "X: " + e.clientX + "<br>";
+            message += "Y: " + e.clientY + "<br>";
+            message += "screenX: " + e.screenX + "<br>";
+            message += "screenY: " + e.screenY + "<br>";
+            document.getElementById('output').innerHTML = message;
+        }
+    </script>
+</head>
+<body>
+    
+    <div></div>
+    <p id="output"></p>
+
+</body>
+</html>

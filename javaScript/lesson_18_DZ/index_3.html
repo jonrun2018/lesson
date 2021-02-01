@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        let array = new Array(10);
+
+        for(let i = 0; i < array.length; i++){
+            array[i] = new Array(10);
+        }
+
+        for(let a = 0; a < array.length; a++) {
+            for(let q = 0; q < array[a].length; q++) {
+                if (a == 0 && q == 5) {
+                    array[a][q] = "*";
+                } else if (a == 1 && q == 4 || a == 1 && q == 6) {
+                    array[a][q] = "*";
+                } else if (a == 2 && q == 3 || a == 2 && q == 7) {
+                    array[a][q] = "*";
+                } else if (a == 3 && q == 2 || a == 3 && q == 8) {
+                    array[a][q] = "*";
+                } else if (a == 4 && q == 1 || a == 4 && q == 9) {
+                    array[a][q] = "*";
+                } else if (a == 5 && q == 0 || a == 5 && q == 1 || a == 5 && q == 2 || a == 5 && q == 4) {
+                    array[a][q] = "*&nbsp";
+                } else if (a == 5 && q == 3) {
+                    array[a][q] = "*";
+                } else {
+                    array[a][q] = "&nbsp";
+                }
+                document.write(array[a][q]);
+            }
+            document.write("<br>");
+        }
+
+        for(let a = 0; a < array.length; a++) {
+            for(let q = 0; q < array[a].length; q++) {
+                if (a == 0) {
+                    array[a][q] = "&nbsp*";
+                } else if (a == 6) {
+                    array[a][q] = "&nbsp*";
+                } else if (a == 1 && q == 0) {
+                    array[a][q] = "&nbsp*";
+                } else if (a == 2 && q == 0) {
+                    array[a][q] = "&nbsp*";
+                } else if (a == 3 && q == 0) {
+                    array[a][q] = "&nbsp*";
+                } else if (a == 4 && q == 0) {
+                    array[a][q] = "&nbsp*";
+                } else if (a == 5 && q == 0) {
+                    array[a][q] = "&nbsp*";
+                } else if (a == 1 && q == 9) {
+                    array[a][q] = "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp*";
+                } else if (a == 2 && q == 9) {
+                    array[a][q] = "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp*";
+                } else if (a == 3 && q == 9) {
+                    array[a][q] = "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp*";
+                } else if (a == 4 && q == 9) {
+                    array[a][q] = "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp*";
+                } else if (a == 5 && q == 9) {
+                    array[a][q] = "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp*";
+                } else {
+                    array[a][q] = "&nbsp";
+                }
+                document.write(array[a][q]);
+            }
+            document.write("<br>");
+        }
+
+        for(let a = 0; a < array.length; a++) {
+            for(let q = 0; q < array[a].length; q++) {
+                if (a == 0 && q == 0) {
+                    array[a][q] = "*";
+                } else if (a == 1 && q == 0) {
+                    array[a][q] = "*";
+                } else if (a == 2 && q == 0) {
+                    array[a][q] = "*";
+                } else if (a == 3 && q == 0) {
+                    array[a][q] = "*";
+                } else if (a == 4 && q == 0) {
+                    array[a][q] = "*";
+                } else if (a == 5 && q == 0) {
+                    array[a][q] = "*";
+                } else if (a == 6 && q == 0) {
+                    array[a][q] = "*&nbsp";
+                } else if (a == 7 && q == 0) {
+                    array[a][q] = "*&nbsp";
+                } else if (a == 7 && q == 1) {
+                    array[a][q] = "*&nbsp";
+                } else if (a == 7 && q == 2) {
+                    array[a][q] = "*&nbsp";
+                } else if (a == 7 && q == 3) {
+                    array[a][q] = "*&nbsp";
+                } else if (a == 7 && q == 4) {
+                    array[a][q] = "*&nbsp";
+                } else if (a == 7 && q == 5) {
+                    array[a][q] = "*&nbsp";
+                } else if (a == 1 && q == 1) {
+                    array[a][q] = "&nbsp*";
+                } else if (a == 2 && q == 2) {
+                    array[a][q] = "&nbsp&nbsp*";
+                } else if (a == 3 && q == 5) {
+                    array[a][q] = "&nbsp*";
+                } else if (a == 4 && q == 7) {
+                    array[a][q] = "&nbsp*";
+                } else if (a == 5 && q == 8) {
+                    array[a][q] = "&nbsp&nbsp*";
+                } else if (a == 6 && q == 9) {
+                    array[a][q] = "&nbsp&nbsp*";
+                } else {
+                    array[a][q] = "&nbsp";
+                }
+                document.write(array[a][q]);
+            }
+            document.write("<br>");
+        }
+
+        for(let a = 0; a < array.length; a++) {
+            for(let q = 0; q < array[a].length; q++) {
+                if (a == 0 && q == 5) {
+                    array[a][q] = "*";
+                } else if (a == 1 && q == 4 || a == 1 && q == 6) {
+                    array[a][q] = "*";
+                } else if (a == 2 && q == 3 || a == 2 && q == 7) {
+                    array[a][q] = "*";
+                } else if (a == 3 && q == 2 || a == 3 && q == 8) {
+                    array[a][q] = "*";
+                } else if (a == 4 && q == 1 || a == 4 && q == 9) {
+                    array[a][q] = "*";
+                } else if (a == 5 && q == 2 || a == 5 && q == 8) {
+                    array[a][q] = "*";
+                } else if (a == 6 && q == 3 || a == 6 && q == 7) {
+                    array[a][q] = "*";
+                } else if (a == 7 && q == 4 || a == 7 && q == 6) {
+                    array[a][q] = "*";
+                } else if (a == 8 && q == 5) {
+                    array[a][q] = "*";
+                } else {
+                    array[a][q] = "&nbsp";
+                }
+                document.write(array[a][q]);
+            }
+            document.write("<br>");
+        }
+
+
+    </script>
+
+
+</body>
+</html>

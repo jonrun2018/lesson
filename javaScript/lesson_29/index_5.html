@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = () => {
+            let btn1 = document.getElementById("button1");
+            let btn2 = document.getElementById("button2");
+
+            if(btn1.addEventListener) {
+                btn1.addEventListener("click", handler, false);
+                btn1.addEventListener("click", removeHandler, false);
+            }
+
+            function handler () {
+                alert("Hello Jenya");
+            }
+            function removeHandler () {
+                btn1.removeEventListener("click", handler, false)
+            }
+        }
+    </script>
+</head>
+<body>
+    
+    <input type="button" id="button1" value="button">
+    <input type="button" id="button2" value="delete">
+
+</body>
+</html>

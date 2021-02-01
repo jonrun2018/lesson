@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function drow() {
+            let canvas = document.getElementById("canvas");
+            let context = canvas.getContext("2d");
+
+            // сохраняет копию текущего состояния переменной
+            context.save() 
+
+            context.translate(100, 100) // переносит графичиский контекст
+
+            //создание пути (рисуем линию)
+            context.beginPath();
+            context.moveTo(0, 0);
+            context.lineTo(100, 0);
+            context.lineTo(100, 100);
+            context.lineTo(0, 100);
+            context.closePath(); // замыкает линию
+            context.stroke();
+
+            //настройка стилий линии
+            context.lineWidth = 8;
+            context.strokeStyle = "red";
+            // context.lineJoin = 'round';
+
+            //заливка
+            context.fillStyle = "blue"
+            context.fill();
+
+            context.restore() // возвращает рисунок до прежнего состояния
+        }
+
+        window.addEventListener('load', drow, true);
+    </script>
+</head>
+<body>
+    <canvas id="canvas" height="300" width="300" style="border: 1px solid black">
+        Ваш браузер не поддерживает canvas;
+    </canvas>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let timer;
+
+        // window.onload = function () {
+        //     // // setTimeout
+
+        //     // setTimeout(function() {
+        //     //     alert("hello world!");
+        //     // }, 5000);
+
+        //     // // setInterval
+
+        //     //     let counter = 0;
+        //     //     function Conter() {
+        //     //         counter++;
+        //     //         document.getElementById('output').innerHTML = counter;
+        //     //     }
+        //     //     setInterval(Conter, 1000);
+
+        //     // timer = window.setTimeout(showMessage, 5000);
+
+        // //     let counter = 0;
+        // //     let intervalHandler;
+
+        // //     function count() {
+        // //         get('output').innerHTML = counter;
+        // //         counter++;
+        // //     }
+
+        // //     get('startButton').onclick = function () {
+        // //         intervalHandler = setInterval(count, 5);
+        // //     }
+
+        // //     get('stopButton').onclick = function () {
+        // //         clearInterval(intervalHandler);
+        // //     }
+        // // }
+
+        // // let get = function (id) {
+        // //     return document.getElementById(id);
+        // }
+
+            // function showMessage() {
+            //     clearTimeout(timer);
+            // }
+
+            // document.location
+            // document.location.protocol
+            // document.location.host
+            // document.location.pathname
+            // document.location.search
+
+            function getQueryString () {
+                let args = {};
+                let query = location.search.substring(1); // бырет строку с 1 индекса
+                let pairs = query.split("&"); // массив с строкой
+
+                for(let i = 0; i < pairs.length; i++) {
+                    let pos = pairs[i].indexOf('=');
+                    if(pos == -1) {
+                        continue;
+                    }
+
+                    let argname = pairs[i].substring(0, pos);
+                    let value =  pairs[i].substring(pos + 1);
+
+                    args[argname] = value;
+                }
+
+                return args;
+            }
+
+
+
+            function print() {
+                let args = getQueryString();
+                let e = document.createElement('p');
+                e.innerHTML = "Login: " + args.login + "<br>";
+                e.innerHTML += "Password: " + args.password;
+                
+                document.body.appendChild(e);
+            }
+
+    </script>
+</head>
+<body>
+
+    <!-- <p>Через 5 секунд будет сообщение</p> -->
+
+    <!-- <p id="output">0</p> -->
+
+    <!-- <p>Через 5 секунд будет сообщение</p>
+    <a href="javascript:cancel()">Отмена</a> -->
+
+    <!-- <p id="output">-</p>
+    <input id="startButtom" type="button" value="Start">
+    <input id="stopButtom" type="button" value="Stop"> -->
+    
+    <input type="button" name="name" value="Read Query Parametrs" onclick="print()">
+
+</body>
+</html>

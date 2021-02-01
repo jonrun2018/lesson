@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function setCookie() {
+            document.cookie = "version =" + encodeURIComponent(document.lastModified); // нельзя вкладывать . , и символы разделители
+        }
+        function getookie() {
+            alert(findCookieValue('version'))
+        }
+
+        function findCookieValue(cookieName) {
+            let allCokies = document.cookie;
+            let pos = allCokies.indexOf(cookieName + "=");
+
+            if(pos != -1) {
+                let start = pos + cookieName.length + 1;
+                let end = allCokies.indexOf(";",start);
+
+                if(end == - 1) {
+                    end = cookieName.length;
+                }
+
+                let value = allCokies.substring(start, end);
+
+                return decodeURIComponent(value);
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="Set cookie" onclick="setCookie()">
+    <input type="button" value="Get cookie" onclick="getookie()">
+    
+</body>
+</html>

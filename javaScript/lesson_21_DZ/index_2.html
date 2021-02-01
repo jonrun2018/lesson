@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+    let a = +prompt("Введите первое число: ");
+    let value = prompt("Введите действие (+,-,*,/): ");
+    let b = +prompt("Введите второе число: ");
+
+    function add(a,b,c) {
+        return a + c;
+    }
+
+    function sub(a,b,c) {
+        return a - c;
+    }
+
+    function mul(a,b,c) {
+        return a * c;
+    }
+
+    function div(a,b,c) {
+        if (c == 0) {
+            return "Делить на ноль нельзя";
+        }
+        return a / c;
+    }
+
+
+    if (value == "+") {
+        document.write(add(a,value,b));
+    } else if (value == "-") {
+        document.write(sub(a,value,b));
+    } else if (value == "*") {
+        document.write(mul(a,value,b));
+    } else if (value == "/") {
+        document.write(div(a,value,b));
+    } else {
+        document.write("Что-то пошло не так) попробуй еще раз");
+    }
+
+    </script>
+
+</body>
+</html>

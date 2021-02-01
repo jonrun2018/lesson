@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = () => {
+            // alert("Width = " + screen.width + "; Height = " + screen.height); // выводит ширину и высл\оту экрана
+            document.getElementById('openButton').onclick = openButtonHandler;
+            document.getElementById('closeButton').onclick = closeButtonHandler;
+
+            let w;
+
+            function openButtonHandler() {
+                w = window.open("window.html", "Window name", "window=400,height=400,resizable=no"); // открываем в новом окне
+            }
+            function closeButtonHandler() {
+                w.close();
+            }
+        }
+
+
+    </script>
+</head>
+<body>
+    
+    <input type="button" id="openButton" value="open">
+    <input type="button" id="closeButton" value="close">
+
+</body>
+</html>

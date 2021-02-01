@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function words(n) {
+            let dozens = n % 100; // получить 2 последних числа
+            let units = n % 10; // получаем 1 последнее число
+            if(dozens > 10 && dozens < 20) {
+                console.log(n + "товаров")
+                return;
+            }
+            if(units > 1 && units < 5) {
+                console.log(n + "товарa")
+                return;
+            }
+            if(units == 1) {
+                console.log(n + "товар")
+                return;
+            }
+            console.log(n + "товаров")
+        }
+        words(115);
+    </script>
+</body>
+</html>

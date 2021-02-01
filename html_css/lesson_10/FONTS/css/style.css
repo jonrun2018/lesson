@@ -1,0 +1,40 @@
+/* google fonts */
+/* webfonts - дает фаил с уже подключенными шрифтами */
+
+@import '../fonts/stylesheet.css'; /* подключение сторонннего css с шрифтами */
+
+@font-face { /* подключает новые шрифты */
+    font-family: 'Big_font';
+    src: url(../fonts/BigShouldersStencilText-Black.ttf);
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face { /* подключает новые шрифты */
+    font-family: 'Big_font_1';
+    src: url(../fonts/BigShouldersStencilText-Regular.ttf);
+    font-weight: 400;
+    font-style: normal;
+}
+
+p:nth-child(1) {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p:nth-child(2) {
+    font-family: 'Big Shoulders Stencil Text', cursive;
+}
+
+p:nth-child(3) {
+    font-family: 'Big_font';  
+}
+
+p:nth-child(4) {
+    font-family: 'Big_font_1';  
+}
+
+p:nth-child(5) {
+    font-family: 'Grenze Gotisch';  
+}
+
+

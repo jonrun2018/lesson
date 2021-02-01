@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        function Fun() {
+            this.d = 21; 
+            this.name = "jon";
+            this.age = 32;
+            this.secondName = "smit";
+        }
+
+        let obj = new Fun();
+
+        document.write(obj.toString() + "<br><br>");
+
+        let array = new Array (21,"re",45,true);
+ 
+        if (typeof(array[0].toString()) == "string" 
+            || array[3].toString() == "string" ) {
+            document.write(array[0] + " и " + array[3] + " теперь строки<br><br>")
+        }
+
+        obj.toString();
+
+
+
+    </script>
+    
+</body>
+</html>

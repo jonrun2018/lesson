@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            border: 3px solid #ccc;
+            padding: 50px;
+            background-color: #fff;
+        }
+    </style>
+    <script>
+        let isTunnel = false;
+        window.onload = () => {
+            let e1 = document.getElementById('first');
+            let e2 = document.getElementById('second');
+            let e3 = document.getElementById('third');
+
+            e1.addEventListener('click', 
+                function(e) {
+                    this.style.backgroundColor = "green";
+                    alert("Обработчик div 1");
+                    e.stopPropagation(); //останавливает событие
+                },
+            isTunnel);
+
+            e2.addEventListener('click', 
+                function(e) {
+                    this.style.backgroundColor = "yellow";
+                    alert("Обработчик div 2");
+                    e.stopPropagation(); 
+                },
+            isTunnel);
+
+            e3.addEventListener('click', 
+                function(e) {
+                    this.style.backgroundColor = "red";
+                    alert("Обработчик div 3");
+                    e.stopPropagation(); 
+                },
+            isTunnel);
+        }
+    </script>
+</head>
+<body>
+    
+    Первый
+    <div id="first">
+        Второй
+        <div id="second">
+            Третий
+            <div id="third"></div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Всплывающая подсказка</title>
+    <style>
+        .tooltip {
+            box-shadow: 2px 2px 3px #000;
+            background: whitesmoke;
+            border: 1px solid #000;
+            padding: 5px;
+            font: bold 10pt sans-serif;
+        }
+    </style>
+    <script>
+        function Tooltip() {
+            this.tooltip = document.createElement('div');
+            this.tooltip.style.position = "absolute";
+            this.tooltip.style.visibility = "hidden";
+            this.tooltip.className = "tooltip";
+        }
+        Tooltip.prototype.show = function(text, x, y) {
+            this.tooltip.innerHTML = text;
+            this.tooltip.style.left = x + "px";
+            this.tooltip.style.top = y + "px";
+            this.tooltip.style.visibility = "visible";
+            
+            if(this.tooltip.parentNode != document.body)
+                document.body.appendChild(this.tooltip);
+        }
+        Tooltip.prototype.hide = function() {
+            this.tooltip.style.visibility = "hidden";
+        }
+        
+        window.onload = () => {
+            let d = document.getElementById('test');
+            d.onmousemove = mouseMoveHandler;
+            d.onmouseout = mouseOutHandler;
+        }
+        
+        let t = new Tooltip();
+        
+        function mouseMoveHandler(e) {
+            if(!e) e = window.event;
+            t.show("This is tooltip text!!!", e.clientX + 10, e.clientY + 10);
+        }
+        function mouseOutHandler() {
+            t.hide();
+        }
+        
+    </script>
+</head>
+<body>
+    <div id="test">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. In aliquid, neque at odio expedita porro, similique reiciendis vitae nisi ipsam fugit sed voluptas dolore deleniti itaque soluta, harum, ipsum rem.
+    </div>
+</body>
+</html>

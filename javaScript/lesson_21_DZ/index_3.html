@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        function pro(a) {
+            if (a < 0) {
+                document.write("Число отрицательное<br><br>");
+            } else if (a > 0) {
+                document.write("Число положительное<br><br>");
+            }
+
+            if (a % 2 == 0) {
+                document.write("Число делиться на 2 без остатка<br><br>")
+            }
+
+            if (a % 3 == 0) {
+                document.write("Число делиться на 3 без остатка<br><br>")
+            }
+
+            if (a % 5 == 0) {
+                document.write("Число делиться на 5 без остатка<br><br>")
+            }
+
+            if (a % 6 == 0) {
+                document.write("Число делиться на 6 без остатка<br><br>")
+            }
+
+            if (a % 9 == 0) {
+                document.write("Число делиться на 9 без остатка<br><br>")
+            }
+
+            if (a == 2) {
+                document.write("Число простое");
+            } else {
+                for (let i = 2; i < a; i++) {
+                    if (a % i != 0) {
+                        document.write("Число простое");
+                        break;
+                    } else {
+                        document.write("Число не являеться простым");
+                        break;
+                    }
+
+                }
+            }
+
+        }
+
+        let a = +prompt("Введите проверяемое число:");
+
+        pro(a);
+
+
+    </script>
+
+</body>
+
+</html>

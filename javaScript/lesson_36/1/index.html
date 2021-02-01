@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        function setCookie() {
+            document.cookie = "lang=html; max-age = 120"; // нельзя вкладывать . , и символы разделители
+        
+            let nextYear = new Date();
+            nextYear.getFullYear(nextYear.getFullYear +1);
+            document.cookie = "name=Ivan Ivanov; expires =" + nextYear; // expires - устаревшее свойство
+        } //max-age - указывает время жизни куки
+        function getookie() {
+            alert(document.cookie);
+        }
+        
+        function changeCookie() {
+            document.cookie = "lang=JavaScript; max-age = 120";
+        }
+        
+        function deleteCookie() {
+            document.cookie = "lang=JavaScript; max-age = 0";
+        }
+
+    </script>
+</head>
+<body>
+    <input type="button" value="Set cookie" onclick="setCookie()">
+    <input type="button" value="Get cookie" onclick="getookie()">
+    <input type="button" value="Change cookie" onclick="changeCookie()">
+    <input type="button" value="Delete cookie" onclick="deleteCookie()">
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        let start = 1;
+        let s = 10;
+
+        do {
+
+            if (s == 0) {
+                break;
+            }
+
+            start = start * s;
+            s--;
+
+            if (start == 720) {
+                document.write("Лучшая доставка<br>");
+                continue;
+            } else if (start == 5040) {
+                document.write("Чуть похуже<br>");
+                continue;
+            } else if (start == 151200) {
+                document.write("Самая дешевая<br>");
+                continue;
+            }
+
+        } while (start > 0);
+        
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

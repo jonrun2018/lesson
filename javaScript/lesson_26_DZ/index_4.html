@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        window.onload = function() {
+           let arr = document.getElementsByClassName("redButton");
+        
+           for(let i = 2; i < arr.length; i++) {
+                arr[i].innerHTML = "текст изменён";
+           }
+        }
+
+    </script>
+</head>
+<body>
+    
+    <p class="redButton">начальный текст</p>
+    <p class="redButton">начальный текст</p>
+    <p class="redButton">начальный текст</p>
+    <p class="redButton">начальный текст</p>
+
+</body>
+</html>

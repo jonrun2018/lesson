@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        function Human(name,age) {
+            this.name = name;
+            this.age = age;
+
+            this.fun = function (){
+                document.write(this.name + "<br>" + this.age + "<br>");
+            }
+        }
+
+        let fun = new Human("Jon",32);
+
+        fun.secondName = "Smit";
+
+        fun.fun2 = function() {
+            document.write(this.secondName)
+        }
+
+        fun.fun();
+        fun.fun2();
+
+    </script>
+    
+</body>
+</html>

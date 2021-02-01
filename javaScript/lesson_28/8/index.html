@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+        }
+
+        div#first {
+           background-color: green; 
+        }
+    </style>
+    <script>
+        window.onload = () => {
+            let div1 = document.getElementById('first');
+            let div2 = document.getElementById('second');
+
+            document.getElementById('btn1').onclick = () => {
+                alert("First div style -" + getStyle(div1, "backgroundColor"));
+            }
+
+            document.getElementById('btn2').onclick = () => {
+                alert("First div style -" + div2.style.backgroundColor);
+            }
+
+            function getStyle(element, styleName) {
+                if(element.currentStyle) { //ie
+                    return element.currentStyle[styleName];
+                } else if (window.getComputedStyle) {
+                    return window.getComputedStyle(element)[styleName];
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    
+    <div id = "first"></div>
+    
+    <div id = "second" style="background-color: red;"></div>
+
+    <button id="btn1">Get first style</button>
+    <button id="btn2">Get second style</button>
+</body>
+</html>

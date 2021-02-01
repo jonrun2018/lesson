@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        (function () {
+            window.addEventListener("load", init, false);
+
+            function init() {
+                let elem = document.getElementById("elem");
+                elem.addEventListener("mousedown", function (e) {
+                    drag(this, e);
+                })
+            }
+
+            function drag(elementToDrag, event) {
+                // получаем координаты мыши в начале перетаскивания
+                let startX = event.clientX,
+                    startY = event.clientY;
+
+                //получаем начальные координаты элемента
+                let origX = elementToDrag.offsetLeft,
+                    origY = elementToDrag.offsetTop;
+
+                //разница между координатами мыши и элемента (объекта)
+                let deltaX = startX - origX,
+                    deltaY = startY - origY;
+
+                document.addEventListener("mousemove", moveHandler, true);
+                document.addEventListener("mouseup", upHandler, true);
+
+                function moveHandler(e) {
+                    if(!e) e = window.event;
+
+                    elementToDrag.style.left = (e.clientX - deltaX) + "px";
+                    elementToDrag.style.top = (e.clientY - deltaY) + "px";
+                }
+
+                function upHandler(e) {
+                    if(!e) e = window.event;
+
+                    document.removeEventListener("mouseup", upHandler, true);
+                    document.removeEventListener("mousemove", moveHandler, true);
+                }
+
+            }
+        })()
+
+
+    </script>
+</head>
+
+<body>
+
+    <div id="elem" style="position: absolute; left: 100px; top: 100px; height: 50px;
+     width: 50px; background-color: green;"></div>
+
+</body>
+
+</html>

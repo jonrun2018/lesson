@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            background-color: green;
+            float: left;
+            height: 50px;
+            width: 50px;
+            margin: 10px;
+        }
+    </style>
+    <script>
+        // function loadHandler () {
+        //     let i = document.getElementById("input1");
+        //     i.onclick = function () {
+        //         this.value = "clicked";
+        //     };
+        // }
+        window.onload = () => {
+            let pArr = document.getElementsByTagName("p");
+            for(let i = 0; i < pArr.length; i ++) {
+                pArr[i].onclick = function () {
+                    this.style.backgroundColor ="red";
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<!-- <body onload="loadHandler()"> -->
+    <!-- <input type="button" value="click me" onclick="this.value = 'clicked'">
+    <input type="button" id="input1" value="click me"> -->
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+</body>
+</html>

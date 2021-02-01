@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    background: url(../image/black.jpg) no-repeat;
+    background-size: contain;
+    background-position: center; 
+
+}
+
+.box_1 {
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    background: red;
+    transform: translateX(50px) translateY(10px) rotate(45deg);
+    display: inline-block;
+    text-align: center;
+}
+
+.box_1 kbd {
+    color: white;
+    font-size: 30px;
+}

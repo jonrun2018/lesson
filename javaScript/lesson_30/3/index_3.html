@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.addEventListener("load", function(){
+            let guard = document.getElementById('guard');
+            guard.addEventListener('keypress', function(e){ //keypress - нажатие любой клавиши на клавиатуре
+
+                if (String.fromCharCode(e.charCode) != "1" && //String.fromCharCode(e.charCode) - возвращает символ который мы нажали
+                String.fromCharCode(e.charCode) != "0" ) {
+                    //ЕСЛИ НАЖАТАЯ КНОПКА НЕ НОЛЬ И НЕ ОДИН, прерываем
+                    e.preventDefault();
+                }
+
+            }, false);
+        }, false);
+    </script>
+</head>
+<body>
+    <div id="guard">
+        <input type="text" value="">
+        <input type="text" value="">
+        <input type="text" value="">
+        <input type="text" value="">
+        <input type="text" value="">
+        <input type="text" value="">
+        <input type="text" value="">
+        <input type="text" value="">
+        <input type="text" value="">
+        <input type="text" value="">
+        <input type="text" value="">
+    </div>
+    
+</body>
+</html>

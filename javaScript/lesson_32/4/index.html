@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = () => {
+            for (let i = 0; i < document.forms[0].elements.length; i++){
+                document.forms[0].elements[i].onchange = function() { // сработает при нажатии tnter
+                    document.getElementById('output').innerHTML = "Значение изменилось в " + this.name;
+                } 
+            }
+        }
+    </script>
+</head>
+<body>
+    
+    <form>
+        Имя <input type="text" name="first"><br>
+        Фамилия <input type="text" name="second"><br>
+        Возраст <input type="text" name="third"><br>
+    </form>
+    <p id="output"></p>
+ 
+    
+</body>
+</html>

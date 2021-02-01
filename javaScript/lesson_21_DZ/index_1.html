@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function Calculate(a,b,c){
+            this.a = a;
+            this.b = b;
+            this.c = c;
+
+            this.q = function (){
+                return (this.a + this.b + this.c) / 3;
+            } 
+        }
+
+        let a = +prompt("Введите первое значение");
+        let b = +prompt("Введите второе значение");
+        let c = +prompt("Введите третье значение");
+
+        let calculate = new Calculate();
+        calculate.a = a;
+        calculate.b = b;
+        calculate.c = c;
+
+        document.write("Среднее арефметическое трех чисел: " + calculate.q());
+
+        
+
+
+
+    </script>
+</body>
+</html>

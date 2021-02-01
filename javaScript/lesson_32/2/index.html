@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        window.onload = () =>{
+            // let f = document.forms[0];
+            let f = document.myform;
+
+            // f.elements[0].value = "Имя"
+            // f.elements[0].value = "Фамилия"
+            // f.elements[0].value = "Возвраст"
+
+            f.firstNameEdit.value = "Имя"
+            f.lastNameEdit.value = "Фамилия"
+            f.ege.value = "Возвраст"
+
+            // console.log(f.elements[3].value);
+        }
+    </script>
+
+</head>
+<body>
+    
+    <form name="myform">
+        Имя <input type="text" name="firstNameEdit"><br>
+        Фамилия <input type="text" name="lastNameEdit"><br>
+        Возраст <input type="text" name="age"><br>
+        <input type="button" value="Регистрация">
+    </form>
+
+</body>
+</html>

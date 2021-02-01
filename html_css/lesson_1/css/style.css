@@ -1,0 +1,38 @@
+table {
+    border-collapse: collapse;
+    text-align: center;
+}
+p{
+    color:yellow;
+}
+.p{
+    color:green !important;
+}
+p.p{
+    color:orange;
+}
+#p{
+    color:blue;
+}
+.div p{
+    color:blue;
+}
+.div h2{
+    color:red;
+    text-decoration: line-through;
+}
+#text{
+    color: rgba( 89,20,35,20 );
+    text-decoration: underline;
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    text-transform: uppercase;
+    white-space: nowrap;
+    line-height: 40px;
+    letter-spacing: 5px;
+    word-spacing: 5px;
+    text-shadow: 5px 5px 10px red; /* тень */
+    text-align: center;
+}

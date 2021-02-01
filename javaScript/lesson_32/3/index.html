@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = () => {
+            document.getElementById('btn').onclick = () => {
+                let message = "";
+                for (let i = 0; i < form1.elements.length; i++) {
+                    let fe = form1.elements[i];
+                    message += "value = " + fe.value + "\r\n"; // значение элемента
+                    message += "form " + fe.form.name + "\r\n" // ссылка на форму в которой находиться элемент
+                    message += "type " + fe.type + "\r\n"; // тип елемента
+                    message += "name " + fe.name + "\r\n"; // имя елемента
+                    message += "------------\r\n"
+                }
+                alert(message);
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <form name="form1">
+        Имя <input type="text" name="firstNameEdit"><br>
+        Фамилия <input type="text" name="lastNameEdit"><br>
+        Возраст <input type="text" name="age"><br>
+        <input type="button" value="Регистрация" id="btn">
+    </form>
+    
+</body>
+</html>

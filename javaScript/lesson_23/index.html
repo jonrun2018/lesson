@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        /*
+        function Rectangle(w,h) {
+            this.w = w;
+            this.h = h;
+        }
+
+        Rectangle.prototype.getArea  = function() {
+            return this.w*this.h;
+        }
+
+        Rectangle.prototype.name = "RECTANGLE";
+
+        let react1 = new Rectangle(100,200);
+        let react2 = new Rectangle(100,200);
+
+        document.write("площадь прямоугольника react1: " + react1.getArea() + "<br>")
+        document.write("площадь прямоугольника react2: " + react2.getArea() + "<br>")
+
+        document.write("<hr>");
+
+        document.write("Имя прямоугольника react1: " + react1.name + "<br>")
+        document.write("Имя прямоугольника react2: " + react2.name + "<br>")
+
+        document.write("<hr>");
+
+        react1.name = "first rectangle"
+
+        document.write("Имя прямоугольника react1: " + react1.name + "<br>")
+        document.write("Имя прямоугольника react2: " + react2.name + "<br>")
+        
+        document.write("<hr>");
+
+        Rectangle.prototype.name = "rectangle";
+
+        document.write("Имя прямоугольника react1: " + react1.name + "<br>")
+        document.write("Имя прямоугольника react2: " + react2.name + "<br>")
+        
+        document.write("<hr>");
+        */
+
+        /*
+        let MyArray = new Array(10);
+        let MyData = new Date(); 
+        let MyString = new String("string");
+        let MyObj = new Object();
+        let MyFunc = new Function('x','y','return x+y');
+
+        let MyCtor = function (x,y) {
+            this.x = x;
+            this.y = y;
+        }; 
+
+        let MyCtorObject = new MyCtor(12,3);
+
+        function showCtor(obj, name) {
+            document.write("Конструктор объекта " + name + " это " + obj.constructor + "<br>"); // выводим свойство обекта
+        }
+
+        showCtor (MyArray,"MyArray");
+        showCtor (MyData,"MyData");
+        showCtor (MyString,"MyString");
+        showCtor (MyObj,"MyObj");
+        showCtor (MyFunc,"MyFunc");
+        showCtor (MyCtorObject,"MyCtorObject");
+
+        let someNewObject = new MyData.constructor(); //создаем объект тем же конструктором
+        document.write("Значение someNewObject: " + someNewObject)
+        */
+
+        /*
+        function Rectangle(w,h) {
+            this.width = w;
+            this.height = h;
+        }
+
+        Rectangle.prototype.getArea = function() {
+            return this.width * this.height;
+        }
+
+        Rectangle.prototype.toString = function() {  // выводит объект [object object]
+            return "Прямоугольник W: " + this.width + " H:" + this.height;
+        }
+
+        Rectangle.prototype.valueOf = function () { // преоритет выше
+            return this.getArea();
+        }
+
+        let rect1 = new Rectangle(100, 200);
+        let rect2 = new Rectangle(400, 300);
+
+        document.write(rect1 + "<br>");
+        document.write(rect2.toString() + "<br>");
+
+        document.write("<hr>");
+
+        document.write(rect1.valueOf() + "<br>");
+        document.write(rect2.valueOf() + "<br>");
+        document.write(rect1 + rect2 + "<br>");
+        */
+
+        /*
+        function Rectangle(w,h) {
+            this.width = w;
+            this.height = h;
+        }
+
+        Rectangle.prototype.getArea = function() {
+            return this.width * this.height;
+        }
+
+        Rectangle.prototype.name = "RECTANGLE";
+
+        let rect1 = new Rectangle(100,200);
+
+        document.write("hasOwnProperty('width'): " + rect1.hasOwnProperty('width') + "<br>"); // проверяет наличие свойства в объекте
+        document.write("hasOwnProperty('name'): " + rect1.hasOwnProperty('name') + "<br>"); // проверяет наличие свойства в объекте
+
+        document.write("<hr>");
+
+        document.write("'width' in rect1: " +('width' in rect1) + "<br>"); // проверяет наличие свойства в объекте и во всех протатипах
+        document.write("'name' in rect1: " +('name' in rect1) + "<br>"); // проверяет наличие свойства в объекте и во всех протатипах
+        */
+
+        function Rectangle(w,h) {
+            this.width = w;
+            this.height = h;
+        }
+
+        Rectangle.prototype.getArea = function() {
+            return this.width * this.height;
+        }
+
+        Rectangle.prototype.toString = function() {  // выводит объект [object object]
+            return "Прямоугольник W: " + this.width + " H:" + this.height;
+        }
+
+        Rectangle.prototype.valueOf = function () { // преоритет выше
+            return this.getArea();
+        }
+
+        Rectangle.prototype.equals = function(otherObj) {
+            if (this.width === otherObj.width && this.height === otherObj.height ){
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        Rectangle.prototype.compareTo = function(otherObj) { // написать одну строку
+            if (this.getArea() > otherObj.getArea()) {
+                return 1;
+            }   else if (this.getArea() < otherObj.getArea()) {
+                return -1;
+            } else {
+                return 0;
+            }
+        }
+
+        let rect1 = new Rectangle(100, 200);
+        let rect2 = new Rectangle(200, 300);
+/*        let res = rect1 == rect2;
+        document.write(res + "<br>"); //false потому что ссылаються на разные области памяти
+
+        let rect3 = rect1;
+        res = rect1 == rect3;
+        document.write(res + "<br>");
+
+        res = rect1.equals(rect2);
+        document.write(res + "<br>");
+
+        res = rect1.compareTo(rect2);
+        document.write(res + "<br>");*/
+
+        if (rect1 < rect2) {
+            document.write("Объект rect1 < rect2<br>")
+        }
+        if (rect1 > rect2) {
+            document.write("Объект rect1 > rect2<br>")
+        }
+
+        if (rect1.compareTo(rect2) > 0) {
+            document.write("Объект rect1 > rect2<br>")
+        }
+
+        if (rect1.compareTo(rect2) < 0) {
+            document.write("Объект rect1 > rect2<br>")
+        }
+
+        if (rect1.compareTo(rect2) == 0) {
+            document.write("Объект rect1 == rect2<br>")
+        }
+
+    </script>
+
+</body>
+</html>

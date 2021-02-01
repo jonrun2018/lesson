@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box {
+            width: 50px;
+            height: 50px;
+            display: inline-block;
+            background: red;
+            margin: 2px;
+        }
+    </style>
+
+    <script>
+
+        /*
+        let counter = 0;
+
+        while (counter < 3) {
+            counter++;
+            document.write("<p>counter " + counter);
+
+            continue; //прерывает цикл и выполняет его еще раз
+            /*break; // прерывает цикл*/
+        /*
+            document.write("эта сторока не выполниться!");
+        };
+
+        document.write("<p>Произведено " + counter + " итераций");
+        */
+        
+        /*
+        let str = "Угадайте цвет с пяти попыток.";
+
+        let maxAttempt = 5;
+        let attempt = 0;
+        let color = "red";
+        let value;
+
+        while (attempt < maxAttempt) {
+            attempt++;
+            value = prompt(str + " Попытка " + attempt, "");
+
+            if(value == null) {
+                break;
+            }    
+
+            if (value != color) {
+                str = "Вы не угадали!";
+                continue;
+            }
+
+            document.write("<p>Поздравляем, вы угадали с " + attempt + " попытки!<br>");
+            break;
+        }
+
+        document.write("Конец игры!!!");
+        */
+
+        /*
+        let counter = 50;
+
+        do {
+            document.write("<p>" + counter);
+            counter++;
+        } while (counter < 10);
+        */
+
+        /*
+        let input;
+
+        do {
+            input = prompt ("Введи что-то");
+            document.write("<p>" + input);
+        } while (input != null);
+        */
+
+        /* //код для вычисления факториала
+        let counter = +prompt("Введите число");
+        let factorial = 1;
+
+        document.write("Факториал числа: " + counter + "! =");
+
+        do {
+            if (counter == 0) {
+                break;
+            }
+
+            factorial = factorial * counter;
+            counter--;
+        } while (counter > 0);
+
+        document.write(factorial);
+        */
+
+        /*
+        for (let a = 0; a < 10; a++) {
+            for (let j = 0; j < 10; j++) {
+                document.write("<div class = 'box'></div>");
+            }
+            document.write("<br>");
+        }
+        */
+
+
+        /*
+        // бесконечный цикл
+        let a;
+
+        for (;;) {
+
+            a = prompt("Введите направление L/R/T/B:");
+            
+            switch(a) {
+                case "L": //охраняющее условие 
+                {
+                    // охраняемая команда
+                    document.write("Идем на лево");
+                    continue;
+                }
+                case "R":
+                {
+                    document.write("Идем на право");
+                    continue;
+                }
+                case "T":
+                {
+                    document.write("Идем на вверх");
+                    continue;
+                }
+                case "B":
+                {
+                    document.write("Идем вниз");
+                    continue;
+                }
+                default:
+                {
+                    exit = confirm("Выйти?");
+                    if (exit) {
+                        document.write("Вы завершили маршрут");
+                        break;
+                    } else {
+                        continue;
+                    }
+                }
+            }
+            break;
+        }
+        */
+
+        /*
+        let count = prompt("Сколько хотите произвести итераций?");
+        let exit = prompt("На какой из итераций выйти из цикла?");
+
+        for(let a = 0; a <= count; a++) {
+            if(a == exit) {
+                break;
+            } else {
+                document.write(a + "<br>");
+            }
+        }
+        */
+
+        let summ = 0;
+        let forDay = 100;
+
+        for(let a = 1; a <= 18; a++) {
+            summ += forDay;
+            forDay *= 2;
+            document.write("День " + a + ": " + summ + "<br>");  
+        }
+
+        document.write("<hr>");
+        document.write(summ * 0.25);
+
+    </script>
+</head>
+<body>
+    
+
+
+</body>
+</html>

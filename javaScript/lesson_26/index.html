@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        input[type="button"] {
+            width: 210px;
+        }
+
+    </style>
+
+    <script>
+        window.onload = function () {
+
+            // 1 
+            // let e = document.getElementById("list");
+            // childNodes - создает массив всех дочерних узлов
+            // for(let i = 0; i < e.childNodes.length; i++) {
+            //     let temp = e.childNodes[i];
+
+            //     if(temp.nodeType != 1) {
+            //         continue;
+            //     }
+
+            //     temp.style.color = "red";
+            //     alert(e.childNodes[i].nodeType) // находит тип узла
+            // }
+            
+
+            // 2
+            // let e = document.getElementById('p1');
+            // e.parentNode.style.border = "1px solid red";
+
+            // 3
+            // let e = document.getElementById('list');
+            // e.firstChild.style.color = "blue"; // обращение к первому элементу
+            // e.lastChild.style.color = "yellow"; // обращение к последнему элементу
+            
+            // 4
+            //  let e = document.getElementsByTagName("li")[2];
+            //  e.nextSibling.style.color = "red"; // обращение к следующему элементу
+            //  e.previousSibling.style.color = "blue"; // обращение к предыдущему элементу
+
+            // 5
+            // let div1 = document.getElementById("div1");
+            // let p1 = document.createElement("p"); // создает тег
+            // p1.innerHTML = "paragraph 1";
+            // div1.appendChild(p1); // добовляем тег в нутрь тега
+            
+            // let a = document.createElement("a");
+            // a.innerHTML = "yandex";
+            // div1.appendChild(a);
+
+            // let p2 = document.createElement("p");
+            // p2.innerHTML = "yandex";
+            // document.body.insertBefore(p2, div1); // передаем элемент в body перед div1
+
+            //  6
+            //  let a1 = document.getElementById("a1");
+            //  let a2 = document.getElementById("a2");
+            //  let a3 = document.getElementById("a3");
+
+            //  //установка атрибута
+            //  a1.setAttribute("href","ya.ru");
+
+            //  a2.removeAttribute("href"); // удаление атрибута
+
+            //  alert(a3.getAttribute("href")); // чтение атрибута
+
+        }
+
+        // Дописать следующие кнопки
+        // removeChild - команда для удаления элемента
+
+        function selectFirstChild() {
+            //resetColor();
+            let firstList = document.getElementById('list');
+            let firstChild = firstList.firstChild;
+
+            if(firstChild != null) {
+                firstChild.setAttribute('style','color:red;');
+            }
+        }
+
+        function selectLastChild() {
+            //resetColor();
+            let list = document.getElementById('list');
+            let child = list.lastChild;
+
+            if(child != null) {
+                child.setAttribute('style','color:red;');
+            }
+        }
+
+        let node = null;
+
+        function selectNextNode() {
+            resetColor();
+
+            if (node == null){
+                let list = document.getElementById('list');
+                node = list.firstChild;
+                node.setAttribute('style','color:green;');
+                return;
+            }
+
+            node = node.nextSibling;
+
+            if(node != null) {
+                node.setAttribute('style','color:green;'); 
+            }
+        }
+
+        function selectPrevNode() {
+            resetColor();
+
+            if (node == null){
+                let list = document.getElementById('list');
+                node = list.lastChild;
+                node.setAttribute('style','color:green;');
+                return;
+            }
+
+            node = node.previousSibling;
+
+            if(node != null) {
+                node.setAttribute('style','color:green;'); 
+            }
+        }
+
+        function createNewChild() {
+            let list = document.getElementById('list');
+            let li = document.createElement("li"); // создает тег
+
+            li.innerHTML = "new item";
+            list.appendChild(li);
+        }
+
+        function removeLastChild() {
+            let list = document.getElementById('list');
+
+            list.removeChild(list.lastChild);            
+        }
+
+        function createNewChildAtStart() {
+            let list = document.getElementById('list');
+            let li = document.createElement("li"); // создает тег
+            li.innerHTML = "new item";
+            let first = list.firstChild;
+
+            list.insertBefore(li, first);
+        }
+
+        function resetColor() {
+            let lilist = document.getElementsByTagName('li');
+            for(let i = 0; i < lilist.length; i++ ) {
+                lilist[i].style.color = 'black';  
+            }
+        }
+
+        function selectExtremeChild() {
+            selectFirstChild();
+            selectLastChild();
+        }
+
+    </script>
+</head>
+<body>
+
+    <!-- 1 3 4
+    <ul id="list">
+        <li>item 1</li><li>item 2</li><li>item 3</li><li>item 4</li><li>item 5</li>
+    </ul>  -->
+    
+    <!-- 2 5 <div>
+        div
+        <p id="p1">Lorem ipsum dolor sit.</p>
+    </div> -->
+
+    <!-- <div id="div1" style="border: 1px solid red; margin: 10px; padding: 10px;"></div> -->
+
+    <!-- 6 <a id="a1">Text 1</a>
+    <a id="a2" href="ya.ru">Text 2</a>
+    <a id="a3" href="http://ya.ru">Text 3</a> -->
+
+    <ul id="list"><li>item 1</li><li>item 2</li><li>item 3</li><li>item 4</li><li>item 5</li></ul>
+
+    <input type="button" onclick="selectFirstChild()" value = "Выбрать первый элемент">
+    <input type="button" onclick="selectLastChild()" value = "Выбрать последний элемент">
+    <input type="button" onclick="selectNextNode()" value = "Выбрать следующий элемент">
+    <input type="button" onclick="selectPrevNode()" value = "Выбрать предыдущий элемент">
+    <input type="button" onclick="createNewChild()" value = "Добавить элемент">
+    <input type="button" onclick="removeLastChild()" value = "удалить элемент">
+    <input type="button" onclick="createNewChildAtStart()" value = "Добавить в начало">
+    <input type="button" onclick="selectExtremeChild()" value = "Выбрать первый и последний элемент">
+
+</body>
+</html>

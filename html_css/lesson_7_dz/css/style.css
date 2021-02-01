@@ -1,0 +1,9 @@
+* {
+    box-sizing: border-box;
+}
+
+.background_1 {
+    background: repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.616), rgba(255, 255, 255, 0.616) 10vh, rgba(00, 00, 00, 0.616) 10vh, rgba(00, 00, 00, 0.616) 20vh),
+    repeating-linear-gradient(180deg, rgba(255, 255, 255, 0.616), rgba(255, 255, 255, 0.616) 10vh, rgba(00, 00, 00, 0.616) 10vh, rgba(00, 00, 00, 0.616) 20vh);
+    height: 100vh;
+}

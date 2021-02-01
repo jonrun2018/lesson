@@ -1,0 +1,99 @@
+* { /* обращение ко всем элементам на странице */
+
+    box-sizing: border-box; /* не дает вылазить за приделы дива*/
+
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header, main, footer{
+    border:  3px solid #000;
+    padding: 10px;
+    margin: 10px;
+}
+
+main{
+    display: flex;
+    flex: 1;
+}
+
+.leftbar, .content{
+    border: 3px solid green;
+    padding: 15px;
+}
+
+.content{
+    flex: 1;
+}
+
+.leftbar{
+    margin-right: 15px;
+}
+
+
+
+/*
+.container{
+/*    font-size: 0px; */
+/*    overflow: hidden; /* что бы не выпадал контент из родительского дива */
+
+/*    height: 500px;
+    border: 5px solid red;
+    display: flex; /* расположить элементы в строку (ужимает элементы) */
+/*    flex-wrap: wrap; /* позволяет переносить элементы (не ужимает) */
+/*    justify-content: space-around; /* расположение элементов */
+/*    align-items: center;
+    flex-direction: column-reverse; /* расположение элементов как угодно по вертикале */
+
+
+/*
+}
+
+.box{
+    width: 200px;
+    height: 200px;
+    background-color: yellow;
+    border: 5px solid black;
+    font-size: 40px;
+
+
+
+
+
+/*    float: left; */
+
+
+
+/*    border: 10px solid #000; */
+/*    padding: 10px; */
+/*    margin: 5px 10px 5px 20px; /* первый верх, дальше по часовой стрелке */
+
+/*    display: inline-block; /* расположение элементов по горизонтале */
+/*    font-size: 40px;
+    margin-right: 15px;*/
+
+/*  background-color: yellow;
+/*    background: url(../images/cat.jpg) no-repeat center yellow; /* не повторяеться, отступ с права 10px, с верху 50px */
+/*    background-image: url(../images/cat.jpg);
+ /*   background-repeat: no-repeat; /*не повторяется*/
+/*  background-position: center; /*задает позицию картинки*/
+/*    background-size: cover; /*размер картинки*/
+/*  background-attachment: fixed; /*прокручивание картинки*/
+/*    
+}
+
+
+
+/*
+.text{
+    width: 50%;
+    height: 300px;
+    border: 5px solid green;
+    overflow: scroll;
+}
+*/
+

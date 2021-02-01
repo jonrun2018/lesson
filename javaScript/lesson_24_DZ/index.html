@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        function Human(name, age) {
+            this.name = name;
+            this.age = age;
+        }
+
+        let human1 = new Human("Jon", 1);
+        let human2 = new Human("Bond", 10);
+        let human3 = new Human("Fredy", 52);
+        let human4 = new Human("Maikl", 25);
+        let human5 = new Human("Geremi", 36);
+        let human6 = new Human("German", 16);
+        let human7 = new Human("G", 2);
+
+        let array = new Array(
+            human1,
+            human2,
+            human3,
+            human4,
+            human5,
+            human6,
+            human7
+        );
+
+        function f() {
+            let a = new Array();
+
+            for (let i = 0; i < array.length; i++) {
+                a[i] = array[i].age;
+            }
+
+            a.sort(function (a, b) { return a - b; }); //функция заставляет sort работать нормально
+
+            for (let r = 0; r < array.length; r++) {
+                for (let b = 0; b < array.length; b++) {
+                    if (a[r] == array[b].age) {
+                        a[r] = array[b].name;
+                    }
+                }
+            }
+
+            document.write(a.join("<br>"));
+        }
+
+        f();
+
+    </script>
+
+</body>
+
+</html>

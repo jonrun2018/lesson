@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        window.onload = function () { // сначала ждем загрузки страницы, потом выполняем функцию
+            /*let paraqgraph = document.getElementById("output");
+            let hyperlink = document.getElementById("link");
+
+            // innerHTML - то что в нутри тега
+            paraqgraph.innerHTML = "HELLO WORLD";
+            hyperlink.innerHTML = "YANDEX";*/
+
+            document.getElementById("answerButton").onclick = function () {
+                let radioButton = document.getElementsByName("answer");
+
+                res = "";
+
+                for(let i = 0; i < radioButton.length; i++){
+                    res += radioButton[i].value + " " + radioButton[i].checked + "\r\n";
+                }
+                alert(res);
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <!--<p id="output">Hello world</p>
+    <a href="https://ya.ru" id="link">Yandex</a>-->
+
+    Да<input type="radio" name="answer" value="да">
+    Нет<input type="radio" name="answer" value="нет">
+    Не знаю<input type="radio" name="answer" value="не знаю">
+
+    <input id="answerButton" type="button" value="Получить ответ">
+
+</body>
+
+</html>

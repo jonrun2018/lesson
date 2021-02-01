@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #modal {
+            width: 500px;
+            height: 200px;
+            background-color: #fff;
+            border: 5px solid blue;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: fixed;
+        }
+        #close-modal {
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            border: 2px solid blue;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+        #close-modal:before,
+        #close-modal:after {
+            content: "";
+            width: 60%;
+            height: 2px;
+            background-color: blue;
+            position: absolute;
+        }
+        #close-modal:before {
+            transform: rotate(45deg);
+        }
+        #close-modal:after {
+            transform: rotate(-45deg);
+        }
+    </style>
+    <script>
+        window.onload = () => {
+            document.getElementById('open').onclick = () => {
+                document.getElementById('modal').style.display = "flex";
+            }
+            document.getElementById('close-modal').onclick = () => {
+                document.getElementById('modal').style.display = "none";
+            }
+        }
+    </script>
+
+</head>
+<body>
+    
+    <button id="open">Open modal</button>
+    <div id="modal">
+        <span id="close-modal"></span>
+        <p>Hello World!</p>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,11 @@
+textarea {
+    resize: none; /* запрет на расшерение */
+}
+
+input[type='text'] {
+    color: red;
+}
+
+input[type='text']::placeholder { /* обращаемся через псевдокласс */
+    color: green;
+}
