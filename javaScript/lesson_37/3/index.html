@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        window.addEventListener('load', init,false);
+
+        function init () {
+            let output = document.getElementById('output');
+            let btn1 = document.getElementById('btn1');
+            let btn2 = document.getElementById('btn2');
+            
+            btn1.onclick = function () {
+                window.localStorage.setItem("key1", "Test value");
+                window.localStorage.key2 = 'Test value 2';
+                window.localStorage["key3"] = 'Test value 3';
+            }
+
+            btn2.onclick = function () {
+                output.innerHTML = window.localStorage.getItem("key1");
+                output.innerHTML += "<br>";
+                output.innerHTML += window.localStorage.key2;
+                output.innerHTML += "<br>";
+                output.innerHTML += window.localStorage["key3"];
+            }
+        }
+    </script> 
+</head>
+<body>
+    
+    <p>
+        Значения в localStorge существует не зависимо от закрытие вкладки или браузера
+    </p>
+    <p>
+        Значения видимы во всех открытых окнах или вкладках
+    </p>
+    <input type="button" id="btn1" value="Запись в localStorage">
+    <input type="button" id="btn2" value="Чтение из localStorage">
+    <div id="output"></div>
+</body>
+</html>

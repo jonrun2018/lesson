@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.addEventListener('load', function(){
+            let saveColor = findCookieValue('page-color');
+
+            if(saveColor) {
+                document.body.style.backgroundColor = saveColor;
+            }
+
+            document.getElementById('saveButton').addEventListener('click', function() {
+                let selectedColor = getCheckedRadioId("color").value;
+                document.cookie = "page-color =" + encodeURIComponent(selectedColor) + "; max-age" + (60*60);
+                document.body.style.backgroundColor = selectedColor;
+            })
+
+            function getCheckedRadioId(name) {
+                let elements = document.getElementsByName(name);
+
+                for(let i = 0; i < elements.length; i++) {
+                    if (elements[i].checked) return elements[i];
+                }
+            }
+
+
+            function findCookieValue (cookieName) {
+                let allcookie = document.cookie;
+                let pos = allcookie.indexOf(cookieName + "=")
+
+                if(pos != -1){
+                    let start = pos + cookieName.length + 1;
+                    let end = allcookie.indexOf(";", start);
+
+                    if(end == -1) {
+                        end = allcookie.length;
+                    }
+
+                    let value = allcookie.substring(start, end);
+                    value = decodeURIComponent(value);
+
+                    return value;
+                }
+            }
+        })
+    </script>
+</head>
+<body>
+
+    <form>
+        <input type="radio" name="color" value="#ffd800"> orange
+        <input type="radio" name="color" value="#5ade54"> green
+        <input type="button" id="saveButton" value="Сохранить">
+    </form>
+
+    
+</body>
+</html>

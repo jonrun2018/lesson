@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = () => {
+
+        let btn = document.getElementById('saveButton');
+        let el = document.getElementsByName('color');
+        let back;
+        document.body.style.backgroundColor = window.localStorage.color;
+
+        btn.onclick = function () {
+            
+            for(let i = 0; i < el.length; i++) {
+                
+                if(el[i].checked) {
+                    back =  window.localStorage.color = el[i].value;
+                }
+
+            }
+
+            document.body.style.backgroundColor = back;
+            
+        }
+
+    }
+    </script>
+</head>
+<body>
+    
+    <form>
+        <input type="radio" name="color" value="#ffd800"> orange
+        <input type="radio" name="color" value="#5ade54"> green
+        <input type="button" id="saveButton" value="Сохранить">
+    </form>
+
+</body>
+</html>

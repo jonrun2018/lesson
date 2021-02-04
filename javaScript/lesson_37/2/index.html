@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        window.addEventListener('load', init,false);
+
+        function init () {
+            let output = document.getElementById('output');
+            let btn1 = document.getElementById('btn1');
+            let btn2 = document.getElementById('btn2');
+            
+            btn1.onclick = function () {
+                window.sessionStorage.setItem("key1", "Test value");
+                window.sessionStorage.key2 = 'Test value 2';
+                window.sessionStorage["key3"] = 'Test value 3';
+            }
+
+            btn2.onclick = function () {
+                output.innerHTML = window.sessionStorage.getItem("key1");
+                output.innerHTML += "<br>";
+                output.innerHTML += window.sessionStorage.key2;
+                output.innerHTML += "<br>";
+                output.innerHTML += window.sessionStorage["key3"];
+            }
+        }
+    </script> 
+</head>
+<body>
+    
+    <p>
+        Значения существует до тех пор пока открыто окно или вкладка
+    </p>
+    <p>
+        Значения видимы только на текущей вкладке, в которой были созданы 
+    </p>
+    <input type="button" id="btn1" value="Запись в sessionStorage">
+    <input type="button" id="btn2" value="Чтение из sessionStorage">
+    <div id="output"></div>
+</body>
+</html>
