@@ -1,15 +1,9 @@
-<meta charset="UTF-8">
-
 
 <?php
     
     require 'app_config.php'; // если произошла ошибка подключения, возвращает ошибку и останавливает сценарий
 
     //include 'app_config.php'; // возвращает предупреждение и продолжает работу
-
-?>
-<?php 
-
 
     // mysql_connect("хост", "имя пользователя", "пароль"); - образец
 
@@ -29,13 +23,13 @@
         die("<p>Ошибка подключения к базе данных: ". mysqli_connect_error() ."</p>"); //выводим ошибку
     }
 
-    echo "<p>Поздравляю, все работает!</p>";
+    //echo "<p>Поздравляю, все работает!</p>";
 
     mysqli_select_db($link, DATABASE_NAME)
     or  die("<p>Ошибка при выборе базы данных ". DATABASE_NAME .": ". mysqli_connect_error() ."</p>"); //выводим ошибку
 
-    echo '<p>Вы подключились к MySQL с использованием базы данных "' . DATABASE_NAME . '"</p>';
-
+    //echo '<p>Вы подключились к MySQL с использованием базы данных "' . DATABASE_NAME . '"</p>';
+    /*
     $result = mysqli_query($link, "SHOW TABLES");
 
     if($result === false) {
@@ -48,7 +42,7 @@
         echo "<li>Таблица: {$row[0]} </li>";
     }
     echo "</ul>";
-
+    */
     //var_dump($result); //вывод переменной со всеми значениями
 ?>
 
