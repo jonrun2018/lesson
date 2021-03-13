@@ -97,7 +97,6 @@ header {
     color: #f46a00;
 }
 
-
 .block2__text ol {
     margin: 0;
     width: 40%;
@@ -138,7 +137,6 @@ footer a:hover {
 }
 
 @media (max-width: 762px) {
-
     .menu nav {
         flex-direction: column;
         position: fixed;
@@ -146,38 +144,31 @@ footer a:hover {
         background: rgba(255, 255, 255, 1);
         left: -101%;
     }
-
     .menu nav.vissible {
         left: 0;
     }
-
     .menu nav a {
         font-size: 30px;
         margin-top: 20px;
     }
-
     .rightbar {
         min-width: 0;
         max-width: none;
     }
-
     .main-wrapper {
         width: 100%;
     }
-
     .content {
         flex-wrap: wrap;
         padding-left: 0;
         padding-right: 0;
     }
-
     .leftblock {
         margin-left: 0;
     }
-
     .hamburger {
         display: block;
-        position: fixed; 
+        position: fixed;
         right: 15px;
         background-color: rgba(255, 255, 255, .5);
         border: 3px solid rgb(194, 159, 3);
@@ -189,7 +180,6 @@ footer a:hover {
     .block2__image {
         display: none;
     }
-
     .rightbar {
         margin-left: 0;
     }
@@ -199,19 +189,15 @@ footer a:hover {
     .block2__image {
         display: none;
     }
-
     .img_2 {
         display: none;
     }
-
     .rightbar {
         margin-left: 0;
     }
-    
     header {
         margin-right: 0;
     }
-
     .leftbar .block1 p {
         text-indent: -1px;
     }
